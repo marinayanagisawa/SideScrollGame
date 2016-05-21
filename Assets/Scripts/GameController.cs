@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -36,7 +37,7 @@ public class GameController : MonoBehaviour {
 
 	void GameStart(){
 		pc.dead = true;
-		Application.LoadLevel("scene1");
+		SceneManager.LoadScene("scene1");
 	}
 
 
