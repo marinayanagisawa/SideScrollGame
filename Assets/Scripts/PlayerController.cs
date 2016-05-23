@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 
+
 		//コンポーネントを取得
 		sr = GetComponent<SpriteRenderer>();
 		rb = GetComponent<Rigidbody2D>();
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour {
 			//ジャンプ処理
 			if (Input.GetButtonDown ("Jump")) {
 				//ジャンプの挙動がおかしいので,処理の中身はFixedUpdateに移動
+				Debug.Log("Jump!!!");
 				moveJ = true;
 				anim.SetTrigger ("jump");
 			}
@@ -97,7 +99,7 @@ public class PlayerController : MonoBehaviour {
 
 		//ジャンプ処理
 		if (moveJ) {
-			Debug.Log("Jump!!!");
+			
 			isGrounded = false;
 			rb.velocity = new Vector2 (rb.velocity.x, jumpHeight);
 		}
