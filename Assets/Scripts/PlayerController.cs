@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour {
 		//足場の端に立った時にジャンプ状態と認識され,動けなくなるバグが発生する模様
 
 		if (isGrounded) {
+
+
 			//移動処理	
 			if (Input.GetAxisRaw ("Horizontal") > 0.0f) {
 				sr.flipX = false;
@@ -64,8 +66,9 @@ public class PlayerController : MonoBehaviour {
 				anim.SetBool ("walk", false);
 			}
 
-			//ジャンプ処理
-			if (Input.GetButtonDown ("Jump")) {
+
+			//ジャンプ処理(spaceキーのJumpがたまに効かないので,暫く左Altで様子見)
+			if (Input.GetButtonDown ("Fire2")) {
 				//ジャンプの挙動がおかしいので,処理の中身はFixedUpdateに移動
 				Debug.Log("Jump!!!");
 				moveJ = true;
