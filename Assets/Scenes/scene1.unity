@@ -145,8 +145,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 1
   moveSpeed: 1.5
-  moveTime: 3
+  moveTime: 5
   step: {fileID: 0}
+  moveR: 1
+  moveL: 0
 --- !u!251 &359764711
 PlatformEffector2D:
   m_ObjectHideFlags: 0
