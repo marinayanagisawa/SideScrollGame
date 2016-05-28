@@ -10,7 +10,6 @@ public class PlayerShot : MonoBehaviour {
 	public GameObject robo;
 	public PlayerController pc;
 
-
 	void Start () {
 
 		//プレイヤーの状態を取得
@@ -35,14 +34,21 @@ public class PlayerShot : MonoBehaviour {
 	}
 
 
-	/*
-	void OnTriggerEnter2D(Collider col){
 
-		//---------------------------ToDo
-		//敵と弾が当たった場合の処理
-		//敵の消滅,弾の消滅
+	void OnTriggerEnter2D(Collider2D col){
+
+		//敵と弾が当たった時のみ,両方を消滅させる
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
+
+		if (layerName == "Enemy") {
+			Destroy (col.gameObject);
+			Destroy (this.gameObject);
+		}
+	
+
+
 
 	}
-*/
+
 
 }
