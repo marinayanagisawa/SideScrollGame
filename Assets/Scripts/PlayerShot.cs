@@ -45,18 +45,11 @@ public class PlayerShot : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "Enemy") {
-			//GetComponent<ParticleSystem> ().Play ();
 
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
 
 			Destroy (col.gameObject);
 			Destroy (this.gameObject);
-
-
-
-			//foreach (ContactPoint2D point in col.contacts) {
-			//	Debug.Log (point);
-			//}
 
 
 		}

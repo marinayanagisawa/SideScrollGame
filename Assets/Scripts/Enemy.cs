@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-	public float MoveSpeed = 5.0f;
+	//public float MoveSpeed = 5.0f;
 	//public GameObject enemy; 
 	public bool isGrounded;
 
