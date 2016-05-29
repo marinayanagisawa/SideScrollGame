@@ -22,11 +22,9 @@ public class MoveStep : MonoBehaviour {
 		//横移動専用　moveTimeで反対に移動する
 		if (horizontal) {
 			if (moveR) {
-				Debug.Log ("moveRight");
 				StartCoroutine(MoveR ());
 
 			} else {
-				Debug.Log ("moveLeft");
 				StartCoroutine(MoveL());
 			}
 		}
