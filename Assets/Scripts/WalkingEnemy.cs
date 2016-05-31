@@ -12,6 +12,20 @@ public class WalkingEnemy : Enemy {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, 0);
+
+
+		//レイヤーマスクの番号を指定
+		int layer = 1 << 9;
+		//接地判定
+		isGrounded = Physics2D.Linecast (transform.position, transform.position - transform.up * 1, layer);
+
+
+		//GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, 0);
+
+		if (isGrounded) {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, 0);
+		}
+
+
 	}
 }

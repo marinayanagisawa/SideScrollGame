@@ -13,21 +13,15 @@ public class Enemy : MonoBehaviour {
 	
 
 	void Update () {
-		//GetComponent<Rigidbody2D> ().velocity = new Vector2 (-MoveSpeed, 0);
+		
+		/*
+		//接地判定・・・子クラスからなぜか判定が取れないので,とりあえずコメントアウト
 		//レイヤーマスクの番号を指定
 		int layer = 1 << 9;
 		//接地判定
 		isGrounded = Physics2D.Linecast (transform.position, transform.position - transform.up * 1, layer);
+		*/
+
 		}
-
-
-
-	/*
-	void FixedUpdate(){
-		//GetComponent<Rigidbody2D> ().AddForce ( new Vector2 (-MoveSpeed, 0));
-
-
-	}
-	*/
 
 }

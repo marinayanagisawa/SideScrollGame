@@ -53,9 +53,6 @@ public class PlayerShot : MonoBehaviour {
 
 
 		}
-	
-
-
 
 	}
 
