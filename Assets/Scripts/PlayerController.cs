@@ -133,16 +133,12 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col){
 		
-		//----------------------------ToDo
-		//敵と当たったら死亡フラグ
-		//プレイヤーの消滅処理
-		//敵と当たった時のみ,両方を消滅させる
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "Enemy") {
-
+			//爆発エフェクト生成
 			Instantiate (smokeR, transform.position, smokeR.transform.rotation);
-
+			//両方を消滅させ,GameOverを出す
 			gc.GameOver ();
 			Destroy (col.gameObject);
 			Destroy (this.gameObject);

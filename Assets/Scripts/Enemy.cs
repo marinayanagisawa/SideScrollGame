@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
  
 	public float moveSpeed = 3.0f;
-
+	public int score;
 
 	void Start () {
 		

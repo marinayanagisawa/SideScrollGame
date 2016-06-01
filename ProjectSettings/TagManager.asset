@@ -47,6 +47,9 @@ TagManager:
   - name: Player
     uniqueID: 2409666705
     locked: 0
+  - name: Front
+    uniqueID: 2892791469
+    locked: 0
   - name: Smoke
     uniqueID: 4235399033
     locked: 0

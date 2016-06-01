@@ -10,10 +10,12 @@ public class PlayerShot : MonoBehaviour {
 	public GameObject robo;
 	public PlayerController pc;
 	public GameObject smoke;
-	//public Vector3 pos;
+	public Enemy enemy;
+	//public GameController gc;
 
 	void Start () {
-		
+
+	//	gc = GetComponent<GameController> ();
 		GetComponent<ParticleSystem> ().Stop ();
 
 		//プレイヤーの状態を取得
@@ -45,6 +47,7 @@ public class PlayerShot : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "Enemy") {
+
 
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
 

@@ -10,8 +10,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject got;
 	public Text text;
-
-	//enum state{GameStart,GamePlay,GameOver}
+	public int playScore;
 
 	void Start () {
 
@@ -50,7 +49,7 @@ public class GameController : MonoBehaviour {
 		//落下演出のため,カメラ（子要素）を切り離して終了
 		robo.transform.DetachChildren ();
 		//少し待ってからゲームスタート
-		Invoke("GameStart", 2.0f);
+		//Invoke("GameStart", 2.0f);
 	}
 
 
