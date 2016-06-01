@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject got;
 	public Text text;
+	//スコア合計用（スコア計算本体は,PlayerShotの衝突判定時に一緒に行っている）
 	public int playScore;
 
 	void Start () {
@@ -20,11 +21,12 @@ public class GameController : MonoBehaviour {
 
 		//ゲームオーバー表示のためのテキストを取得しておく
 		got = GameObject.Find ("GameOverText");
-
+	
 	}
 	
 
 	void Update () {
+
 
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
@@ -41,7 +43,7 @@ public class GameController : MonoBehaviour {
 
 
 	public void GameOver(){
-		Debug.Log ("GameOver(), Called!!");
+		Debug.Log ("GameOver(), Called!! Score =" + playScore);
 		//ゲームオーバーのテキスト表示
 		text = got.GetComponent<Text> ();
 		text.text = "GameOver";

@@ -11,11 +11,14 @@ public class PlayerShot : MonoBehaviour {
 	public PlayerController pc;
 	public GameObject smoke;
 	public Enemy enemy;
-	//public GameController gc;
+	public int count;
+	public GameObject gameController;
+	public GameController gc;
 
 	void Start () {
 
-	//	gc = GetComponent<GameController> ();
+		gameController = GameObject.Find ("GameController");
+		gc = gameController.GetComponent<GameController> ();
 		GetComponent<ParticleSystem> ().Stop ();
 
 		//プレイヤーの状態を取得
@@ -48,13 +51,17 @@ public class PlayerShot : MonoBehaviour {
 
 		if (layerName == "Enemy") {
 
+			//ヒットした敵オブジェクトを取得
+			GameObject enemy = col.gameObject;
+			//敵に設定されたスコアにアクセス
+			count = enemy.GetComponent<Enemy> ().score;
+			Debug.Log (count);
+			//スコアをGameControllerのスコア合計に追加
+			gc.playScore += count;
 
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
-
 			Destroy (col.gameObject);
 			Destroy (this.gameObject);
-
-
 		}
 
 	}
