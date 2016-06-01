@@ -3,14 +3,12 @@ using System.Collections;
 
 public class WalkingEnemy : Enemy {
 
-	public float moveSpeed = 3.0f;
 
-	// Use this for initialization
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 
 
@@ -19,11 +17,9 @@ public class WalkingEnemy : Enemy {
 		//接地判定
 		isGrounded = Physics2D.Linecast (transform.position, transform.position - transform.up * 1, layer);
 
-
-		//GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, 0);
-
+		//歩く敵は接地していたら移動
 		if (isGrounded) {
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, 0);
+			base.Move ();
 		}
 
 

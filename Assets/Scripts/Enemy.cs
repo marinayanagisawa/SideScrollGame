@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-
-	//public float MoveSpeed = 5.0f;
-	//public GameObject enemy; 
+ 
 	public bool isGrounded;
+	public float moveSpeed = 3.0f;
+
 
 	void Start () {
 		
@@ -15,13 +15,23 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		
 		/*
-		//接地判定・・・子クラスからなぜか判定が取れないので,とりあえずコメントアウト
+		//接地判定
 		//レイヤーマスクの番号を指定
 		int layer = 1 << 9;
 		//接地判定
 		isGrounded = Physics2D.Linecast (transform.position, transform.position - transform.up * 1, layer);
 		*/
 
+
 		}
+
+
+
+	//移動処理
+	public void Move(){
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, 0);
+	}
+
+
 
 }
