@@ -3,6 +3,7 @@ using System.Collections;
 
 public class WalkingEnemy : Enemy {
 
+	public bool isGrounded;
 
 	void Start () {
 	
@@ -10,7 +11,6 @@ public class WalkingEnemy : Enemy {
 	
 
 	void Update () {
-
 
 		//レイヤーマスクの番号を指定
 		int layer = 1 << 9;
@@ -21,7 +21,6 @@ public class WalkingEnemy : Enemy {
 		if (isGrounded) {
 			base.Move ();
 		}
-
-
+			
 	}
 }

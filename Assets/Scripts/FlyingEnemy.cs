@@ -10,6 +10,7 @@ public class FlyingEnemy : Enemy {
 	
 
 	void Update () {
+		//移動処理
 		base.Move ();
 	}
 }
