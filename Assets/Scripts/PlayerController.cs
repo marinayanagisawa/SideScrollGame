@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 	public Rigidbody2D rb;
 	public SpriteRenderer sr;
 	public Animator anim;
+	public GameController gc;
+	public GameObject gameController;
 
 	//移動関連
 	public float speed = 5.0f;
@@ -14,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 
 	//死亡フラグ
 	public bool dead = false;
+	public GameObject smokeR;
 
 	//弾の発射方向切り替えのためのフラグ
 	public bool back;
@@ -36,6 +39,9 @@ public class PlayerController : MonoBehaviour {
 		sr = GetComponent<SpriteRenderer>();
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
+
+		gameController = GameObject.Find ("GameController");
+		gc = gameController.GetComponent<GameController> ();
 	}
 
 
@@ -124,15 +130,24 @@ public class PlayerController : MonoBehaviour {
 	}
 			
 
-	/*
-	void OnTriggerEnter2D(Collider col){
+
+	void OnCollisionEnter2D(Collision2D col){
 		
 		//----------------------------ToDo
 		//敵と当たったら死亡フラグ
 		//プレイヤーの消滅処理
+		//敵と当たった時のみ,両方を消滅させる
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
+		if (layerName == "Enemy") {
+
+			Instantiate (smokeR, transform.position, smokeR.transform.rotation);
+
+			gc.GameOver ();
+			Destroy (col.gameObject);
+			Destroy (this.gameObject);
+		}
 	}
-*/
 
 
 

@@ -35,13 +35,13 @@ public class GameController : MonoBehaviour {
 	}
 
 
-	void GameStart(){
+	public void GameStart(){
 		pc.dead = true;
 		SceneManager.LoadScene("scene1");
 	}
 
 
-	void GameOver(){
+	public void GameOver(){
 		Debug.Log ("GameOver(), Called!!");
 		//ゲームオーバーのテキスト表示
 		text = got.GetComponent<Text> ();
