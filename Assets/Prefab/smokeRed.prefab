@@ -11,6 +11,7 @@ GameObject:
   - 198: {fileID: 19831262}
   - 199: {fileID: 19904870}
   - 114: {fileID: 11482088}
+  - 114: {fileID: 11481164}
   m_Layer: 0
   m_Name: smokeRed
   m_TagString: Untagged
@@ -30,6 +31,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11481164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4478060b255f3cd4d8e7a7d0e0be46b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11482088
 MonoBehaviour:
   m_ObjectHideFlags: 1

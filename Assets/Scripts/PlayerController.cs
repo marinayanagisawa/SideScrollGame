@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 	//移動関連
 	public float speed = 5.0f;
 	public float jumpHeight = 30.0f;
-	public bool moveJ;
+	private bool moveJ;
 
 	//死亡フラグ
 	public bool dead = false;
@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 
-
 		//コンポーネントを取得
 		sr = GetComponent<SpriteRenderer>();
 		rb = GetComponent<Rigidbody2D>();
@@ -52,7 +51,6 @@ public class PlayerController : MonoBehaviour {
 		//足場の端に立った時にジャンプ状態と認識され,動けなくなるバグが発生する模様
 
 		if (isGrounded) {
-
 
 			//移動処理	
 			if (Input.GetAxisRaw ("Horizontal") > 0.0f) {
@@ -144,7 +142,4 @@ public class PlayerController : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 	}
-
-
-
 }

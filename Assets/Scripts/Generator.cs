@@ -12,11 +12,10 @@ public class Generator : MonoBehaviour {
 	public float generateDis = 2.0f;
 	private float dis;
 	public float nextGenerateTime = 3.0f;
-	public bool canGenerate = true;
+	private bool canGenerate = true;
 	public float GenerateLimit = 3.0f;
 
 	void Start () {
-		
 
 	}
 
@@ -43,20 +42,16 @@ public class Generator : MonoBehaviour {
 					StartCoroutine (Generate ());
 				}
 			}
-
-
-
 		}
-			
-
 	}
 
-	//敵を生成
+
+	//敵を生成(once用)
 	void GenerateOnce(){
 		Instantiate (enemy[enemyNum] , transform.position, transform.rotation);
 	}
 
-
+	//敵を生成
 	IEnumerator Generate(){
 		canGenerate = false;
 		Instantiate (enemy [enemyNum], transform.position, transform.rotation);
@@ -64,6 +59,5 @@ public class Generator : MonoBehaviour {
 		canGenerate = true;
 
 	}
-
-
+		
 }

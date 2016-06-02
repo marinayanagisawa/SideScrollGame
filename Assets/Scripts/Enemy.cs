@@ -19,7 +19,5 @@ public class Enemy : MonoBehaviour {
 	public void Move(){
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, 0);
 	}
-
-
-
+		
 }

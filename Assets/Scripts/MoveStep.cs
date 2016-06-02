@@ -7,6 +7,8 @@ public class MoveStep : MonoBehaviour {
 	public float moveSpeed = 1.0f;
 	public float moveTime = 5.0f;
 	public GameObject step;
+
+	//移動方向フラグ
 	private bool moveR = true;
 	private bool moveL = false;
 	private bool moveU = true;
@@ -29,11 +31,8 @@ public class MoveStep : MonoBehaviour {
 			}
 		}
 	
-
 		//縦移動専用 moveTimeで上下に移動する
 		if (!horizontal){
-			//step.GetComponent<Rigidbody2D> ().velocity= new Vector2 (0, -moveSpeed);
-
 
 			if (moveU) {
 				StartCoroutine(MoveU());
@@ -41,8 +40,6 @@ public class MoveStep : MonoBehaviour {
 			} else if(moveD) {
 				StartCoroutine(MoveD());
 			}
-
-
 		}
 	}
 

@@ -11,6 +11,7 @@ GameObject:
   - 198: {fileID: 19817514}
   - 199: {fileID: 19999052}
   - 114: {fileID: 11419240}
+  - 114: {fileID: 11463574}
   m_Layer: 0
   m_Name: smoke
   m_TagString: Untagged
@@ -42,6 +43,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerName: Smoke
+--- !u!114 &11463574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4478060b255f3cd4d8e7a7d0e0be46b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19817514
 ParticleSystem:
   m_ObjectHideFlags: 1

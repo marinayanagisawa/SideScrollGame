@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerShot : MonoBehaviour {
 
-
 	public float shotSpeed = 10.0f;
 	public float shotLifeTime = 1.5f;
 
@@ -41,9 +40,7 @@ public class PlayerShot : MonoBehaviour {
 		Destroy (gameObject, shotLifeTime);
 	
 	}
-
-
-
+		
 	void OnTriggerEnter2D(Collider2D col){
 
 		//敵と弾が当たった時のみ,両方を消滅させる
@@ -59,9 +56,11 @@ public class PlayerShot : MonoBehaviour {
 			//スコアをGameControllerのスコア合計に追加
 			gc.playScore += count;
 
+			//エフェクトを生成
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
 			Destroy (col.gameObject);
 			Destroy (this.gameObject);
+
 		}
 
 	}
