@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   score: 20
+  lifetime: 20
 --- !u!212 &21233642
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ public class FlyingEnemy : Enemy {
 
 
 	void Start () {
-	
+		Destroy (this.gameObject, lifetime);
 	}
 	
 

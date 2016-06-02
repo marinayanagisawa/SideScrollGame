@@ -6,7 +6,7 @@ public class WalkingEnemy : Enemy {
 	public bool isGrounded;
 
 	void Start () {
-	
+		Destroy (this.gameObject, lifetime);
 	}
 	
 

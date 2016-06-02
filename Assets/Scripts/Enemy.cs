@@ -5,9 +5,10 @@ public class Enemy : MonoBehaviour {
  
 	public float moveSpeed = 3.0f;
 	public int score;
+	public float lifetime = 10.0f;
 
 	void Start () {
-		
+
 	}
 
 	void Update () {
