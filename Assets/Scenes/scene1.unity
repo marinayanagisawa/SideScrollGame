@@ -129,6 +129,8 @@ MonoBehaviour:
   got: {fileID: 0}
   text: {fileID: 0}
   playScore: 0
+  scoreLabel: {fileID: 0}
+  sText: {fileID: 0}
 --- !u!1 &359764706 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 156760, guid: 2bca761b29e9ebb428adedceaf4ea885, type: 2}
@@ -306,7 +308,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 'Score : 0'
 --- !u!222 &610683976
 CanvasRenderer:
   m_ObjectHideFlags: 0
