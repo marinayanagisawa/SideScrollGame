@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 412432}
   - 212: {fileID: 21233642}
-  - 58: {fileID: 5848562}
   - 95: {fileID: 9581078}
   m_Layer: 10
   m_Name: EnemySprite
@@ -28,6 +27,7 @@ GameObject:
   - 4: {fileID: 424736}
   - 114: {fileID: 11409142}
   - 50: {fileID: 5024934}
+  - 58: {fileID: 5832092}
   m_Layer: 10
   m_Name: Enemy2
   m_TagString: Untagged
@@ -77,12 +77,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &5848562
+--- !u!58 &5832092
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 162688}
+  m_GameObject: {fileID: 181160}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  score: 20
 --- !u!212 &21233642
 SpriteRenderer:
   m_ObjectHideFlags: 1
