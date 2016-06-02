@@ -158,13 +158,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063c4d6f72b68394bbec1c88b12ea0df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robo: {fileID: 1998747394}
   enemy:
   - {fileID: 133570, guid: c3ff91b4a2ba9b743befa8cfe8b69882, type: 2}
   - {fileID: 181160, guid: 315a43aaa075f2c44ae310b20489d165, type: 2}
   enemyNum: 1
-  generateDis: 10
-  dis: 0
+  once: 0
+  robo: {fileID: 1998747394}
+  generateDis: 13
+  nextGenerateTime: 2.5
+  canGenerate: 1
+  GenerateLimit: 9
 --- !u!4 &302614844
 Transform:
   m_ObjectHideFlags: 0
@@ -288,6 +291,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 390653971}
+--- !u!1001 &490320318
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 14.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445510, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489780, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+      propertyPath: robo
+      value: 
+      objectReference: {fileID: 1998747394}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bfc7282a4ded5444584b1f02c601cb44, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &610683973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,52 +1393,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 938403620}
   m_RootOrder: 4
---- !u!1 &1961826922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1961826923}
-  - 114: {fileID: 1961826924}
-  m_Layer: 0
-  m_Name: Generator
-  m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1961826923
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1961826922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.9, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
---- !u!114 &1961826924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1961826922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 063c4d6f72b68394bbec1c88b12ea0df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  robo: {fileID: 1998747394}
-  enemy:
-  - {fileID: 133570, guid: c3ff91b4a2ba9b743befa8cfe8b69882, type: 2}
-  - {fileID: 181160, guid: 315a43aaa075f2c44ae310b20489d165, type: 2}
-  enemyNum: 0
-  generateDis: 10
-  dis: 0
 --- !u!1 &1998747394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1497,6 @@ MonoBehaviour:
   smokeR: {fileID: 129236, guid: 0ba78a397dd660d4e94d3cd28a2972be, type: 2}
   back: 0
   nextShotTime: 0.5
-  canShot: 1
   muzzle: {fileID: 1159593867}
   shot: {fileID: 176260, guid: efa7e287aac3c0645b255ec23de35891, type: 2}
   groundlayer:

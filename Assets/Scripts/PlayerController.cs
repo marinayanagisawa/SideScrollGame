@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 
 	//ショットの制御用
 	public float nextShotTime = 0.5f;
-	public bool canShot = true;
+	private bool canShot = true;
 	public GameObject muzzle;
 	public GameObject shot;
 

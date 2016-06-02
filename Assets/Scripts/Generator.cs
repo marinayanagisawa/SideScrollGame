@@ -3,13 +3,17 @@ using System.Collections;
 
 public class Generator : MonoBehaviour {
 
-	public GameObject robo;
+	//インスペクタからそれぞれ設定する項目
 	public GameObject[] enemy;
 	public int enemyNum;
+	public bool once = true;
+
+	public GameObject robo;
 	public float generateDis = 2.0f;
-
-	public float dis;
-
+	private float dis;
+	public float nextGenerateTime = 3.0f;
+	public bool canGenerate = true;
+	public float GenerateLimit = 3.0f;
 
 	void Start () {
 		
@@ -18,20 +22,48 @@ public class Generator : MonoBehaviour {
 
 	void Update () {
 		
-		//ジェネレーターの位置を取得
+		//ジェネレーターとプレイヤーの位置を取得
 		Vector2 enemyPos = this.transform.position;
-		//プレイヤーの位置を取得
 		Vector2 roboPos = robo.transform.position;
 		//プレイヤーとジェネレーターの位置を比較
 		dis = Vector2.Distance (roboPos, enemyPos);
 		//Debug.Log (dis);
 
-		//敵を生成し,ジェネレーターを削除
+		//プレイヤーが近づいた時の処理
 		if (dis < generateDis) {
-			Instantiate (enemy[enemyNum] , transform.position, transform.rotation);
-			Destroy (this);
+
+			if (once) {
+				//一度生成してから消滅
+				GenerateOnce ();
+				Destroy (this);
+			}
+
+			if (!once && dis > GenerateLimit) {
+				if (canGenerate) {
+					StartCoroutine (Generate ());
+				}
+			}
+
+
+
 		}
+			
 
 	}
+
+	//敵を生成
+	void GenerateOnce(){
+		Instantiate (enemy[enemyNum] , transform.position, transform.rotation);
+	}
+
+
+	IEnumerator Generate(){
+		canGenerate = false;
+		Instantiate (enemy [enemyNum], transform.position, transform.rotation);
+		yield return new WaitForSeconds (nextGenerateTime);
+		canGenerate = true;
+
+	}
+
 
 }

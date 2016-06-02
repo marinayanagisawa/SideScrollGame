@@ -7,8 +7,8 @@ public class PlayerShot : MonoBehaviour {
 	public float shotSpeed = 10.0f;
 	public float shotLifeTime = 1.5f;
 
-	public GameObject robo;
-	public PlayerController pc;
+	private GameObject robo;
+	private PlayerController pc;
 	public GameObject smoke;
 	public Enemy enemy;
 	public int count;
