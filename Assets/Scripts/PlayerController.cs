@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour {
 	public float jumpHeight = 30.0f;
 	private bool moveJ;
 
-	//死亡フラグ
+	//死亡フラグ関連
+	public int life = 2;
 	public bool dead = false;
 	public GameObject smokeR;
 
@@ -130,16 +131,24 @@ public class PlayerController : MonoBehaviour {
 
 
 	void OnCollisionEnter2D(Collision2D col){
-		
+
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "Enemy") {
-			//爆発エフェクト生成
-			Instantiate (smokeR, transform.position, smokeR.transform.rotation);
-			//両方を消滅させ,GameOverを出す
-			gc.GameOver ();
-			Destroy (col.gameObject);
-			Destroy (this.gameObject);
+
+			life--;
+			Debug.Log (life);
+
+			if (life < 0) {
+				//爆発エフェクト生成
+				Instantiate (smokeR, transform.position, smokeR.transform.rotation);
+				//両方を消滅させ,GameOverを出す
+				gc.GameOver ();
+				Destroy (col.gameObject);
+				Destroy (this.gameObject);
+			} else {
+				Destroy (col.gameObject);
+			}
 		}
 	}
 }
