@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 5.0f;
 	public float jumpHeight = 30.0f;
 	private bool moveJ;
+	public bool canMove = true;
 
 	//死亡フラグ関連
 	public int life = 2;
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour {
 		//isGrounded = Physics2D.Linecast (transform.position, transform.position - transform.up * 1, groundlayer);
 		//足場の端に立った時にジャンプ状態と認識され,動けなくなるバグが発生する模様
 
-		if (isGrounded) {
+		if (isGrounded && canMove) {
 
 			//移動処理	
 			if (Input.GetAxisRaw ("Horizontal") > 0.0f) {
@@ -84,7 +85,7 @@ public class PlayerController : MonoBehaviour {
 		//プレイヤーの弾を発射
 		if (Input.GetButtonDown ("Fire1")) {
 			//撃てる状態であれば,弾を撃つ
-			if (canShot) {
+			if (canShot && canMove) {
 				StartCoroutine (PlayerShot ());
 			}
 		}
@@ -136,8 +137,10 @@ public class PlayerController : MonoBehaviour {
 
 		if (layerName == "Enemy") {
 
+			canMove = false;
 			life--;
 			Debug.Log (life);
+			anim.SetTrigger ("dmg");
 
 			if (life < 0) {
 				//爆発エフェクト生成
@@ -151,4 +154,12 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 	}
+
+
+	void SwitchToCanMove(){
+		Debug.Log("canMove ON!!");
+		canMove = true;
+	}
+
+
 }
