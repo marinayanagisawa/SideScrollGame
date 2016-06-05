@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour {
 
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "Enemy") {
+		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
 
 			canMove = false;
 			life--;
