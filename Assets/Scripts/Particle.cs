@@ -7,7 +7,7 @@ public class Particle : MonoBehaviour {
 
 	void Start () {
 		//シュリケンの残骸を消す
-		ParticleSystem particleSystem = GetComponent <ParticleSystem>();
+		//ParticleSystem particleSystem = GetComponent <ParticleSystem>();
 		Destroy(this.gameObject, particleLifetime);
 	}
 }

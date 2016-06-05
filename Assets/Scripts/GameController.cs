@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour {
 	//スコア表示用
 	public GameObject scoreLabel;
 	public Text sText;
+	public GameObject life;
+	public Text lText;
 
 
 	void Start () {
@@ -22,6 +24,10 @@ public class GameController : MonoBehaviour {
 		//プレイヤーの状態を取得
 		robo = GameObject.Find ("robo");
 		pc = robo.GetComponent<PlayerController> ();
+
+		//ライフ表示のためのテキストを取得
+		life = GameObject.Find ("Life");
+		lText = life.GetComponent<Text> ();
 
 		//スコア表示のためのテキストを取得
 		scoreLabel = GameObject.Find ("ScoreText");
@@ -36,6 +42,9 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		//スコア表示
 		sText.text = "Score : " + playScore;
+
+		//ライフ表示
+		lText.text = "Life : " + (pc.life + 1);
 
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
