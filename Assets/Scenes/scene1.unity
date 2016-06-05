@@ -131,6 +131,8 @@ MonoBehaviour:
   playScore: 0
   scoreLabel: {fileID: 0}
   sText: {fileID: 0}
+  life: {fileID: 0}
+  lText: {fileID: 0}
 --- !u!1 &302614842
 GameObject:
   m_ObjectHideFlags: 0
