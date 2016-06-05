@@ -46,7 +46,7 @@ public class PlayerShot : MonoBehaviour {
 		//敵と弾が当たった時のみ,両方を消滅させる
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "Enemy") {
+		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
 
 			//ヒットした敵オブジェクトを取得
 			GameObject enemy = col.gameObject;
