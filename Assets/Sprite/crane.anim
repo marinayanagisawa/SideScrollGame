@@ -1,0 +1,298 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: crane
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -57.1196}
+        inSlope: {x: 0, y: 0, z: 30.144726}
+        outSlope: {x: 0, y: 0, z: 30.144726}
+        tangentMode: 0
+      - time: 0.36666667
+        value: {x: 0, y: 0, z: -46.066532}
+        inSlope: {x: 0, y: 0, z: 46.63926}
+        outSlope: {x: 0, y: 0, z: 46.63926}
+        tangentMode: 0
+      - time: 2
+        value: {x: 0, y: 0, z: 57.052}
+        inSlope: {x: 0, y: 0, z: 0.38746262}
+        outSlope: {x: 0, y: 0, z: 0.38746262}
+        tangentMode: 0
+      - time: 3.6666667
+        value: {x: 0, y: 0, z: -46.87945}
+        inSlope: {x: 0, y: 0, z: -46.5271}
+        outSlope: {x: 0, y: 0, z: -46.5271}
+        tangentMode: 0
+      - time: 4
+        value: {x: 0, y: 0, z: -57.111225}
+        inSlope: {x: 0, y: 0, z: -30.695328}
+        outSlope: {x: 0, y: 0, z: -30.695328}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: craneSprite
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.23
+        inSlope: 0.42580646
+        outSlope: 0.42580646
+        tangentMode: 10
+      - time: 0.51666665
+        value: -0.01
+        inSlope: 0.42580646
+        outSlope: 0.42580646
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.x
+    path: craneSprite
+    classID: 60
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: -2.903226
+        outSlope: -2.903226
+        tangentMode: 10
+      - time: 0.51666665
+        value: -1.5
+        inSlope: -2.903226
+        outSlope: -2.903226
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.y
+    path: craneSprite
+    classID: 60
+    script: {fileID: 0}
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 2223602519
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 2223602519
+      attribute: 413499720
+      script: {fileID: 0}
+      classID: 60
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2223602519
+      attribute: 1872933342
+      script: {fileID: 0}
+      classID: 60
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 4
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 4
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: craneSprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 4
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: craneSprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -57.1196
+        inSlope: 30.144726
+        outSlope: 30.144726
+        tangentMode: 10
+      - time: 0.36666667
+        value: -46.066532
+        inSlope: 46.63926
+        outSlope: 46.63926
+        tangentMode: 10
+      - time: 2
+        value: 57.052
+        inSlope: 0.38746262
+        outSlope: 0.38746262
+        tangentMode: 10
+      - time: 3.6666667
+        value: -46.87945
+        inSlope: -46.5271
+        outSlope: -46.5271
+        tangentMode: 10
+      - time: 4
+        value: -57.111225
+        inSlope: -30.695328
+        outSlope: -30.695328
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: craneSprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.23
+        inSlope: 0.42580646
+        outSlope: 0.42580646
+        tangentMode: 10
+      - time: 0.51666665
+        value: -0.01
+        inSlope: 0.42580646
+        outSlope: 0.42580646
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.x
+    path: craneSprite
+    classID: 60
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: -2.903226
+        outSlope: -2.903226
+        tangentMode: 10
+      - time: 0.51666665
+        value: -1.5
+        inSlope: -2.903226
+        outSlope: -2.903226
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Offset.y
+    path: craneSprite
+    classID: 60
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: craneSprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: craneSprite
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: craneSprite
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []

@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour {
 
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
+		if (layerName == "Enemy" || layerName == "FlyingEnemy" || layerName == "Gimmick") {
 
 			canMove = false;
 			life--;
@@ -145,14 +145,27 @@ public class PlayerController : MonoBehaviour {
 			if (life < 0) {
 				//爆発エフェクト生成
 				Instantiate (smokeR, transform.position, smokeR.transform.rotation);
-				//両方を消滅させ,GameOverを出す
+				//敵とプレイヤーを消滅させ,GameOverを出す
 				gc.GameOver ();
-				Destroy (col.gameObject);
 				Destroy (this.gameObject);
+
+				//ステージギミックは消さない
+				if (layerName != "Gimmick") {
+					Destroy (col.gameObject);
+				}
+
+
 			} else {
-				Destroy (col.gameObject);
+
+
+				if (layerName != "Gimmick") {
+					Destroy (col.gameObject);
+				}
 			}
 		}
+
+
+
 	}
 
 
