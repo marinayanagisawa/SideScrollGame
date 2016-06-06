@@ -13,10 +13,9 @@ public class GameController : MonoBehaviour {
 	//スコア合計用（スコア計算本体は,PlayerShotの衝突判定時に一緒に行っている）
 	public int playScore;
 	//スコア表示用
-	public GameObject scoreLabel;
-	public Text sText;
-	public GameObject life;
-	public Text lText;
+	public Text scoreText;
+	//HPゲージ
+	public Slider slider;
 
 
 	void Start () {
@@ -25,26 +24,26 @@ public class GameController : MonoBehaviour {
 		robo = GameObject.Find ("robo");
 		pc = robo.GetComponent<PlayerController> ();
 
-		//ライフ表示のためのテキストを取得
-		life = GameObject.Find ("Life");
-		lText = life.GetComponent<Text> ();
-
-		//スコア表示のためのテキストを取得
-		scoreLabel = GameObject.Find ("ScoreText");
-		sText = scoreLabel.GetComponent<Text> ();
-
 		//ゲームオーバー表示のためのテキストを取得
 		got = GameObject.Find ("GameOverText");
+
+		//スコア表示のためのテキストを取得
+		scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
+
+		//HPゲージのスライダー取得
+		slider = GameObject.Find("Slider").GetComponent<Slider>();
+
 	
 	}
 	
 
 	void Update () {
 		//スコア表示
-		sText.text = "Score : " + playScore;
+		scoreText.text = "Score : " + playScore;
 
 		//ライフ表示
-		lText.text = "Life : " + (pc.life + 1);
+		slider.value = (pc.life + 1);
+
 
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
