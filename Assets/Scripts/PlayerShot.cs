@@ -48,13 +48,17 @@ public class PlayerShot : MonoBehaviour {
 
 		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
 
+			Debug.Log ("Hit to Enemy!");
+
 			//ヒットした敵オブジェクトを取得
 			GameObject enemy = col.gameObject;
-			//敵に設定されたスコアにアクセス
-			count = enemy.GetComponent<Enemy> ().score;
-			Debug.Log (count);
-			//スコアをGameControllerのスコア合計に追加
-			gc.playScore += count;
+
+		
+				//敵に設定されたスコアにアクセス
+				count = enemy.transform.parent.GetComponent<Enemy> ().score;
+				Debug.Log (count);
+				//スコアをGameControllerのスコア合計に追加
+				gc.playScore += count;
 
 			//エフェクトを生成
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
