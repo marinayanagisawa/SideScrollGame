@@ -264,8 +264,7 @@ MonoBehaviour:
   got: {fileID: 0}
   text: {fileID: 0}
   playScore: 0
-  scoreLabel: {fileID: 0}
-  sText: {fileID: 0}
+  scoreText: {fileID: 0}
   slider: {fileID: 0}
 --- !u!1 &302614842
 GameObject:
@@ -1217,7 +1216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &600899884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1365,16 +1364,16 @@ RectTransform:
   m_GameObject: {fileID: 613901170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children:
   - {fileID: 2018749100}
   - {fileID: 1403003310}
   - {fileID: 1026307726}
   m_Father: {fileID: 1712808496}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187.6, y: 196.1}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -102, y: -23}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &613901172
@@ -1873,7 +1872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1026307726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2831,7 +2830,7 @@ RectTransform:
   m_GameObject: {fileID: 1403003309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1377195285}
   m_Father: {fileID: 613901171}
@@ -4181,7 +4180,7 @@ RectTransform:
   m_GameObject: {fileID: 2018749099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 613901171}
   m_RootOrder: 0
