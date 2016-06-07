@@ -16,17 +16,16 @@ public class TitleManager : MonoBehaviour {
 
 	void Update () {
 	
+		//タイトル画面のアニメーション設定
 		if (Input.GetKeyDown (KeyCode.X)) {
 			titleAnim.SetTrigger("started");
 			psAnim.SetTrigger ("pressed");
 			Invoke ("LoadGame", 1.7f);
 		}
-
-
 	}
 
-
-	public void LoadGame(){
+	//ゲームシーン呼び出し
+	private void LoadGame(){
 		SceneManager.LoadScene("scene1");
 	}
 }

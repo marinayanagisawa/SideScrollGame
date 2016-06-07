@@ -52,12 +52,12 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-
+	/*
 	public void GameStart(){
 		pc.dead = true;
 		SceneManager.LoadScene("scene1");
 	}
-
+	*/
 
 	public void GameOver(){
 		Debug.Log ("GameOver(), Called!! Score =" + playScore);
@@ -68,8 +68,11 @@ public class GameController : MonoBehaviour {
 		//落下演出のため,カメラ（子要素）を切り離して終了
 		robo.transform.DetachChildren ();
 		//少し待ってからゲームスタート
-		//Invoke("GameStart", 2.0f);
+		Invoke("ReturnToTitle", 2.0f);
 	}
 		
+	private void ReturnToTitle(){
+		SceneManager.LoadScene ("title");
+	}
 
 }
