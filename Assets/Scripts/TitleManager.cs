@@ -19,7 +19,7 @@ public class TitleManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.X)) {
 			titleAnim.SetTrigger("started");
 			psAnim.SetTrigger ("pressed");
-			Invoke ("LoadGame", 1.0f);
+			Invoke ("LoadGame", 1.7f);
 		}
 
 
