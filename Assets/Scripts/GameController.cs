@@ -70,6 +70,6 @@ public class GameController : MonoBehaviour {
 		//少し待ってからゲームスタート
 		//Invoke("GameStart", 2.0f);
 	}
-
+		
 
 }
