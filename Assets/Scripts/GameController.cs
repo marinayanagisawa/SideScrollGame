@@ -12,8 +12,15 @@ public class GameController : MonoBehaviour {
 	public Text text;
 	//スコア合計用（スコア計算本体は,PlayerShotの衝突判定時に一緒に行っている）
 	public int playScore;
+	public int highScore;
+
 	//スコア表示用
 	public Text scoreText;
+	public Text highScoreText;
+
+	//playerPrefsのキー
+	private string highScoreKey = "HighScore";
+
 	//HPゲージ
 	public Slider slider;
 
@@ -29,21 +36,31 @@ public class GameController : MonoBehaviour {
 
 		//スコア表示のためのテキストを取得
 		scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
+		highScoreText = GameObject.Find ("HighScoreText").GetComponent<Text> ();
 
 		//HPゲージのスライダー取得
 		slider = GameObject.Find("Slider").GetComponent<Slider>();
 
+		//ハイスコアを取得
+		highScore = PlayerPrefs.GetInt (highScoreKey, 0);
 	
+
 	}
 	
 
 	void Update () {
+
+		//ハイスコアの書き換え
+		if (highScore < playScore) {
+			highScore = playScore;
+		}
+
 		//スコア表示
 		scoreText.text = "Score : " + playScore;
+		highScoreText.text = "High Score : " + highScore;
 
 		//ライフ表示
 		slider.value = (pc.life + 1);
-
 
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
@@ -67,11 +84,17 @@ public class GameController : MonoBehaviour {
 
 		//落下演出のため,カメラ（子要素）を切り離して終了
 		robo.transform.DetachChildren ();
+
+		//ハイスコアを保持
+		PlayerPrefs.SetInt (highScoreKey, highScore);
+		PlayerPrefs.Save ();
+
 		//少し待ってからゲームスタート
 		Invoke("ReturnToTitle", 2.0f);
 	}
 		
-	private void ReturnToTitle(){
+	//タイトルに戻る
+	void ReturnToTitle(){
 		SceneManager.LoadScene ("title");
 	}
 

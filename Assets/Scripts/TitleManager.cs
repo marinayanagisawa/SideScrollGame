@@ -12,6 +12,7 @@ public class TitleManager : MonoBehaviour {
 
 		titleAnim = GameObject.Find ("titleSprite").GetComponent<Animator> ();
 		psAnim = GameObject.Find ("Pressx").GetComponent<Animator> ();
+
 	}
 
 	void Update () {
