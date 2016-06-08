@@ -24,6 +24,9 @@ public class GameController : MonoBehaviour {
 	//HPゲージ
 	public Slider slider;
 
+	//トランジション用
+	public Animator animator;
+
 
 	void Start () {
 
@@ -44,7 +47,8 @@ public class GameController : MonoBehaviour {
 		//ハイスコアを取得
 		highScore = PlayerPrefs.GetInt (highScoreKey, 0);
 	
-
+		//トランジション用のアニメーター取得
+		animator = GameObject.Find ("Black").GetComponent<Animator> ();
 	}
 	
 
@@ -90,6 +94,7 @@ public class GameController : MonoBehaviour {
 		PlayerPrefs.Save ();
 
 		//少し待ってからゲームスタート
+		animator.SetTrigger ("FadeOut");
 		Invoke("ReturnToTitle", 2.0f);
 	}
 		
