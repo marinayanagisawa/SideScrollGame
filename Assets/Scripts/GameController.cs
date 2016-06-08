@@ -10,9 +10,10 @@ public class GameController : MonoBehaviour {
 
 	public GameObject got;
 	public Text text;
+
 	//スコア合計用（スコア計算本体は,PlayerShotの衝突判定時に一緒に行っている）
 	public int playScore;
-	public int highScore;
+	public static int highScore;
 
 	//スコア表示用
 	public Text scoreText;
@@ -96,6 +97,11 @@ public class GameController : MonoBehaviour {
 		//少し待ってからゲームスタート
 		animator.SetTrigger ("FadeOut");
 		Invoke("ReturnToTitle", 2.0f);
+	}
+		
+	//titleからハイスコアを取得するためのgetter
+	public static int GetHighScore(){
+		return highScore;
 	}
 		
 	//タイトルに戻る
