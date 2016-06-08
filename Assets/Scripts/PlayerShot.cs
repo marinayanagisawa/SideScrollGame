@@ -53,10 +53,9 @@ public class PlayerShot : MonoBehaviour {
 			//ヒットした敵オブジェクトを取得
 			GameObject enemy = col.gameObject;
 
-		
 				//敵に設定されたスコアにアクセス
 				count = enemy.transform.parent.GetComponent<Enemy> ().score;
-				Debug.Log (count);
+				//Debug.Log (count);
 				//スコアをGameControllerのスコア合計に追加
 				gc.playScore += count;
 

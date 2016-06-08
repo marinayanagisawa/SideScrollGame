@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour {
 
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
-			Debug.Log ("Call GameOver fnction!!");
+			//Debug.Log ("Call GameOver fnction!!");
 			GameOver();
 		}
 	}
@@ -77,7 +77,7 @@ public class GameController : MonoBehaviour {
 	*/
 
 	public void GameOver(){
-		Debug.Log ("GameOver(), Called!! Score =" + playScore);
+		//Debug.Log ("GameOver(), Called!! Score =" + playScore);
 		//ゲームオーバーのテキスト表示
 		text = got.GetComponent<Text> ();
 		text.text = "GameOver";

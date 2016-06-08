@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
 			//ジャンプ処理(spaceキーのJumpがたまに効かないので,暫く左Altで様子見)
 			if (Input.GetButtonDown ("Fire2")) {
 				//ジャンプの挙動がおかしいので,処理の中身はFixedUpdateに移動
-				Debug.Log("Jump!!!");
+				//Debug.Log("Jump!!!");
 				moveJ = true;
 				anim.SetTrigger ("jump");
 			}
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour {
 
 		//プレイヤーの落下チェック(pos使い回しのためここでチェック)
 		if (pos.y < -5.0f) {
-			Debug.Log ("Dead flug ON!!");
+			//Debug.Log ("Dead flug ON!!");
 			dead = true;
 		}
 	}
