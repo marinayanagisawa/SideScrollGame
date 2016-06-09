@@ -7,7 +7,7 @@ public class TitleManager : MonoBehaviour {
 
 	private Animator titleAnim;
 	private Animator psAnim;
-	public Text scoreText;
+	private Text scoreText;
 
 
 	void Start () {

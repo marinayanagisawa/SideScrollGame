@@ -3,11 +3,10 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public Rigidbody2D rb;
-	public SpriteRenderer sr;
-	public Animator anim;
-	public GameController gc;
-	public GameObject gameController;
+	private Rigidbody2D rb;
+	private SpriteRenderer sr;
+	private Animator anim;
+	private GameController gc;
 
 	//移動関連
 	public float speed = 5.0f;
@@ -40,9 +39,7 @@ public class PlayerController : MonoBehaviour {
 		sr = GetComponent<SpriteRenderer>();
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
-
-		gameController = GameObject.Find ("GameController");
-		gc = gameController.GetComponent<GameController> ();
+		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 	}
 
 
@@ -153,11 +150,9 @@ public class PlayerController : MonoBehaviour {
 				if (layerName != "Gimmick") {
 					Destroy (col.gameObject);
 				}
-
-
+					
 			} else {
-
-
+				
 				if (layerName != "Gimmick") {
 					Destroy (col.gameObject);
 				}

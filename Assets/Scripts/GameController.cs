@@ -5,28 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject robo;
-	public PlayerController pc;
+	private GameObject robo;
+	private PlayerController pc;
 
-	public GameObject got;
-	public Text text;
+	//ゲームオーバー表示用
+	private Text gameOverText;
 
-	//スコア合計用（スコア計算本体は,PlayerShotの衝突判定時に一緒に行っている）
+	//スコア合計用（スコア計算本体は,PlayerShotのほうで,衝突判定時に一緒に行っている）
 	public int playScore;
-	public static int highScore;
+	public int highScore;
 
 	//スコア表示用
-	public Text scoreText;
-	public Text highScoreText;
+	private Text scoreText;
+	private Text highScoreText;
 
 	//playerPrefsのキー
-	private string highScoreKey = "HighScore";
+	public static string highScoreKey = "HighScore";
 
 	//HPゲージ
-	public Slider slider;
+	private Slider slider;
 
 	//トランジション用
-	public Animator animator;
+	private Animator animator;
 
 
 	void Start () {
@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour {
 		pc = robo.GetComponent<PlayerController> ();
 
 		//ゲームオーバー表示のためのテキストを取得
-		got = GameObject.Find ("GameOverText");
+		gameOverText = GameObject.Find ("GameOverText").GetComponent<Text> ();
 
 		//スコア表示のためのテキストを取得
 		scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
@@ -74,18 +74,10 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	/*
-	public void GameStart(){
-		pc.dead = true;
-		SceneManager.LoadScene("scene1");
-	}
-	*/
-
 	public void GameOver(){
 		//Debug.Log ("GameOver(), Called!! Score =" + playScore);
 		//ゲームオーバーのテキスト表示
-		text = got.GetComponent<Text> ();
-		text.text = "GameOver";
+		gameOverText.text = "GameOver";
 
 		//落下演出のため,カメラ（子要素）を切り離して終了
 		robo.transform.DetachChildren ();
@@ -101,7 +93,8 @@ public class GameController : MonoBehaviour {
 		
 	//titleからハイスコアを取得するためのgetter
 	public static int GetHighScore(){
-		return highScore;
+		int getScore = PlayerPrefs.GetInt(highScoreKey);
+		return getScore;
 	}
 		
 	//タイトルに戻る

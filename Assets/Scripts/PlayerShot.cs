@@ -6,24 +6,20 @@ public class PlayerShot : MonoBehaviour {
 	public float shotSpeed = 10.0f;
 	public float shotLifeTime = 1.5f;
 
-	private GameObject robo;
 	private PlayerController pc;
+	private GameController gc;
+
 	public GameObject smoke;
-	public Enemy enemy;
-	public int count;
-	public GameObject gameController;
-	public GameController gc;
+
 
 	void Start () {
 
-		gameController = GameObject.Find ("GameController");
-		gc = gameController.GetComponent<GameController> ();
+		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 		GetComponent<ParticleSystem> ().Stop ();
 
 		//プレイヤーの状態を取得
-		robo = GameObject.Find ("robo");
-		pc = robo.GetComponent<PlayerController> ();
-
+		pc = GameObject.Find ("robo").GetComponent<PlayerController> ();
+	
 		//プレイヤーの向きを見て飛ぶ方向を変更
 		if (pc.back == false) {
 			Debug.Log ("Fire!");
@@ -54,7 +50,7 @@ public class PlayerShot : MonoBehaviour {
 			GameObject enemy = col.gameObject;
 
 				//敵に設定されたスコアにアクセス
-				count = enemy.transform.parent.GetComponent<Enemy> ().score;
+				int count = enemy.transform.parent.GetComponent<Enemy> ().score;
 				//Debug.Log (count);
 				//スコアをGameControllerのスコア合計に追加
 				gc.playScore += count;

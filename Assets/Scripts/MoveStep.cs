@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MoveStep : MonoBehaviour {
 
+	//インスペクタからの設定項目
 	public bool horizontal = true;
 	public float moveSpeed = 1.0f;
 	public float moveTime = 5.0f;
@@ -14,10 +15,6 @@ public class MoveStep : MonoBehaviour {
 	private bool moveU = true;
 	private bool moveD = false;
 
-	void Start () {
-
-	}
-	
 
 	void Update () {
 

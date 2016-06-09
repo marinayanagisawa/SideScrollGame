@@ -7,13 +7,7 @@ public class Enemy : MonoBehaviour {
 	public int score;
 	public float lifetime = 10.0f;
 
-	void Start () {
 
-	}
-
-	void Update () {
-
-		}
 		
 	//移動処理
 	public void Move(){
