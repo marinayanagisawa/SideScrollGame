@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundlayer;
 	public bool isGrounded = true;
 
+	public PolygonCollider2D pCol;
+
 
 	void Start () {
 
@@ -135,8 +137,8 @@ public class PlayerController : MonoBehaviour {
 
 		if (layerName == "Enemy" || layerName == "FlyingEnemy" || layerName == "Gimmick") {
 
+			//-------------ダメージアニメーション中でなければ普通にダメージ処理
 			if (!hitting) {
-
 				hitting = true;
 				canMove = false;
 				life--;
@@ -146,35 +148,52 @@ public class PlayerController : MonoBehaviour {
 				if (life < 0) {
 					//爆発エフェクト生成
 					Instantiate (smokeR, transform.position, smokeR.transform.rotation);
-					//敵とプレイヤーを消滅させ,GameOverを出す
+					//GameOver処理
 					gc.GameOver ();
+
+					//プレイヤーを消去
 					Destroy (this.gameObject);
 
 					//ステージギミックは消さない
 					if (layerName != "Gimmick") {
 						Destroy (col.gameObject);
 					}
-					
+
+					//当たったのが敵だった場合は敵も消去
 				} else {
-				
 					if (layerName != "Gimmick") {
 						Destroy (col.gameObject);
 					}
 				}
 
-			}
 
+				//-----------ダメージアニメーション中だった場合は以下の処理
+			} else {
+				//当たったのが敵だったら敵を消去
+				if (layerName != "Gimmick") {
+					Destroy (col.gameObject);
+
+				//ギミックに当たった場合は,すり抜けの演出のために一時的にisTriggerをON
+				} else if (layerName == "Gimmick") {
+					pCol = col.gameObject.GetComponent<PolygonCollider2D> ();
+					pCol.isTrigger= true;
+				}
+
+			}
+				
 		}
 
 	}
 
-
+	//ダメージアニメーション終了後に呼び出す
 	public void FinishHitting(){
+		//ダメージアニメーションの終了
 		hitting = false;
+		//ギミックのisTriggerをON
+		pCol.isTrigger = false;
 	}
 
 	void SwitchToCanMove(){
-		Debug.Log("canMove ON!!");
 		canMove = true;
 	}
 
