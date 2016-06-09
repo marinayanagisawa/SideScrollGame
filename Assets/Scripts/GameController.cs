@@ -28,8 +28,11 @@ public class GameController : MonoBehaviour {
 	//トランジション用
 	private Animator animator;
 
+	public bool gameOver;
 
 	void Start () {
+
+		gameOver = false;
 
 		//プレイヤーの状態を取得
 		robo = GameObject.Find ("robo");
@@ -70,6 +73,7 @@ public class GameController : MonoBehaviour {
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
 			//Debug.Log ("Call GameOver fnction!!");
+			gameOver= true;
 			GameOver();
 		}
 	}

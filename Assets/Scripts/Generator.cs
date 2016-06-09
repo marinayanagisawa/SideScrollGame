@@ -14,35 +14,46 @@ public class Generator : MonoBehaviour {
 	public float nextGenerateTime = 3.0f;
 	private bool canGenerate = true;
 	public float GenerateLimit = 3.0f;
+	private PlayerController pc;
+	private GameController gc;
 
 	void Start () {
+
+		robo = GameObject.Find ("robo");
+		pc = robo.GetComponent<PlayerController> ();
+		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 
 	}
 
 	void Update () {
-		
-		//ジェネレーターとプレイヤーの位置を取得
-		Vector2 enemyPos = this.transform.position;
-		Vector2 roboPos = robo.transform.position;
-		//プレイヤーとジェネレーターの位置を比較
-		dis = Vector2.Distance (roboPos, enemyPos);
-		//Debug.Log (dis);
 
-		//プレイヤーが近づいた時の処理
-		if (dis < generateDis) {
+		if (gc.gameOver == false) {
 
-			if (once) {
-				//一度生成してから消滅
-				GenerateOnce ();
-				Destroy (this);
-			}
+			//ジェネレーターとプレイヤーの位置を取得
+			Vector2 enemyPos = this.transform.position;
+			Vector2 roboPos = robo.transform.position;
+			//プレイヤーとジェネレーターの位置を比較
+			dis = Vector2.Distance (roboPos, enemyPos);
+			//Debug.Log (dis);
 
-			if (!once && dis > GenerateLimit) {
-				if (canGenerate) {
-					StartCoroutine (Generate ());
+			//プレイヤーが近づいた時の処理
+			if (dis < generateDis) {
+
+				if (once) {
+					//一度生成してから消滅
+					GenerateOnce ();
+					Destroy (this);
+				}
+
+				if (!once && dis > GenerateLimit) {
+					if (canGenerate) {
+						StartCoroutine (Generate ());
+					}
 				}
 			}
-		}
+
+		} 
+
 	}
 
 

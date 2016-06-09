@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 
 	//死亡フラグ関連
 	public int life = 2;
-	public bool dead = false;
+	public bool dead;
 	public GameObject smokeR;
 	public bool hitting = false;
 
@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
+
+		dead = false;
 	}
 
 
@@ -146,6 +148,8 @@ public class PlayerController : MonoBehaviour {
 				anim.SetTrigger ("dmg");
 
 				if (life < 0) {
+
+					dead = true;
 					//爆発エフェクト生成
 					Instantiate (smokeR, transform.position, smokeR.transform.rotation);
 					//GameOver処理
