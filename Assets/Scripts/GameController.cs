@@ -72,7 +72,6 @@ public class GameController : MonoBehaviour {
 
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
-			//Debug.Log ("Call GameOver fnction!!");
 			gameOver= true;
 			GameOver();
 		}
