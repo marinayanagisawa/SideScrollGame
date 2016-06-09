@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 	public int life = 2;
 	public bool dead = false;
 	public GameObject smokeR;
+	public bool hitting = false;
 
 	//弾の発射方向切り替えのためのフラグ
 	public bool back;
@@ -134,35 +135,43 @@ public class PlayerController : MonoBehaviour {
 
 		if (layerName == "Enemy" || layerName == "FlyingEnemy" || layerName == "Gimmick") {
 
-			canMove = false;
-			life--;
-			Debug.Log (life);
-			anim.SetTrigger ("dmg");
+			if (!hitting) {
 
-			if (life < 0) {
-				//爆発エフェクト生成
-				Instantiate (smokeR, transform.position, smokeR.transform.rotation);
-				//敵とプレイヤーを消滅させ,GameOverを出す
-				gc.GameOver ();
-				Destroy (this.gameObject);
+				hitting = true;
+				canMove = false;
+				life--;
+				Debug.Log (life);
+				anim.SetTrigger ("dmg");
 
-				//ステージギミックは消さない
-				if (layerName != "Gimmick") {
-					Destroy (col.gameObject);
-				}
+				if (life < 0) {
+					//爆発エフェクト生成
+					Instantiate (smokeR, transform.position, smokeR.transform.rotation);
+					//敵とプレイヤーを消滅させ,GameOverを出す
+					gc.GameOver ();
+					Destroy (this.gameObject);
+
+					//ステージギミックは消さない
+					if (layerName != "Gimmick") {
+						Destroy (col.gameObject);
+					}
 					
-			} else {
+				} else {
 				
-				if (layerName != "Gimmick") {
-					Destroy (col.gameObject);
+					if (layerName != "Gimmick") {
+						Destroy (col.gameObject);
+					}
 				}
+
 			}
+
 		}
-
-
 
 	}
 
+
+	public void FinishHitting(){
+		hitting = false;
+	}
 
 	void SwitchToCanMove(){
 		Debug.Log("canMove ON!!");
