@@ -33,9 +33,6 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundlayer;
 	public bool isGrounded = true;
 
-	//public PolygonCollider2D pCol;
-
-
 	void Start () {
 
 		//コンポーネントを取得
@@ -132,70 +129,79 @@ public class PlayerController : MonoBehaviour {
 	}
 			
 
-
+	//敵と接触した場合
 	void OnCollisionEnter2D(Collision2D col){
 
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "Enemy" || layerName == "FlyingEnemy" || layerName == "Gimmick") {
+		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
+			
+			//敵を削除
+			Destroy (col.gameObject);
 
-			//-------------ダメージアニメーション中でなければ普通にダメージ処理
+			//ダメージアニメーション中でなければ普通にダメージ処理
 			if (!hitting) {
-				hitting = true;
-				canMove = false;
-				life--;
-				Debug.Log (life);
-				anim.SetTrigger ("dmg");
+				Damage ();
+
+				//ライフが０なら死亡処理
+				if (life < 0) {
+					Dead ();
+				}
+			}
+		}
+	}
+
+	//ステージギミックと当たった場合
+	void OnTriggerEnter2D(Collider2D col){
+
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
+
+		if (layerName == "Gimmick") {
+
+			if (!hitting) {
+				Damage ();
 
 				if (life < 0) {
-
-					dead = true;
-					//爆発エフェクト生成
-					Instantiate (smokeR, transform.position, smokeR.transform.rotation);
-					//GameOver処理
-					gc.GameOver ();
-
-					//プレイヤーを消去
-					Destroy (this.gameObject);
-
-					//ステージギミックは消さない
-					if (layerName != "Gimmick") {
-						Destroy (col.gameObject);
-					}
-
-					//当たったのが敵だった場合は敵も消去
-				} else {
-					if (layerName != "Gimmick") {
-						Destroy (col.gameObject);
-					}
-				}
-
-
-				//-----------ダメージアニメーション中だった場合は以下の処理
-			} else {
-				//当たったのが敵だったら敵を消去
-				if (layerName != "Gimmick") {
-					Destroy (col.gameObject);
-
-				//ギミックに当たった場合は,すり抜けの演出のために一時的にisTriggerをON
-				} else if (layerName == "Gimmick") {
-				//	pCol = col.gameObject.GetComponent<PolygonCollider2D> ();
-				//	pCol.isTrigger= true;
-				}
-
+					Dead ();
+				} 
 			}
-				
 		}
-
 	}
-		
 
-	//ダメージアニメーション終了後に呼び出す
+
+	//ダメージ処理
+	void Damage(){
+		//フラグの書き換え
+		hitting = true;
+		canMove = false;
+
+		//ライフ値を引く
+		life--;
+		Debug.Log (life);
+
+		//ダメージアニメーション設定
+		anim.SetTrigger ("dmg");
+	}
+
+
+	void Dead(){
+		
+		dead = true;
+		//爆発エフェクト生成
+		Instantiate (smokeR, transform.position, smokeR.transform.rotation);
+
+		//GameOver処理
+		gc.GameOver ();
+
+		//プレイヤーを消去
+		Destroy (this.gameObject);
+	}
+
+
+	//ダメージアニメーション終了後に呼び出す(アニメーション終了フラグ)
 	public void FinishHitting(){
-		//ダメージアニメーションの終了
 		hitting = false;
-		//ギミックのisTriggerをON
-		//pCol.isTrigger = false;
+
 	}
 
 	void SwitchToCanMove(){

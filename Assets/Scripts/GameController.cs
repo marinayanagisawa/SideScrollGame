@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour {
 	//トランジション用
 	private Animator animator;
 
+	//Generatorにゲーム中か知らせる
 	public bool gameOver;
 
 	void Start () {
