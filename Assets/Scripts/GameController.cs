@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
 	private PlayerController pc;
 
 	//ゲームオーバー表示用
-	private Text gameOverText;
+	public Text gameOverText;
 
 	//スコア合計用（スコア計算本体は,PlayerShotのほうで,衝突判定時に一緒に行っている）
 	public int playScore;

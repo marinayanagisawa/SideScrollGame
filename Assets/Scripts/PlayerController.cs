@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundlayer;
 	public bool isGrounded = true;
 
-	public PolygonCollider2D pCol;
+	//public PolygonCollider2D pCol;
 
 
 	void Start () {
@@ -179,8 +179,8 @@ public class PlayerController : MonoBehaviour {
 
 				//ギミックに当たった場合は,すり抜けの演出のために一時的にisTriggerをON
 				} else if (layerName == "Gimmick") {
-					pCol = col.gameObject.GetComponent<PolygonCollider2D> ();
-					pCol.isTrigger= true;
+				//	pCol = col.gameObject.GetComponent<PolygonCollider2D> ();
+				//	pCol.isTrigger= true;
 				}
 
 			}
@@ -188,13 +188,14 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
+		
 
 	//ダメージアニメーション終了後に呼び出す
 	public void FinishHitting(){
 		//ダメージアニメーションの終了
 		hitting = false;
 		//ギミックのisTriggerをON
-		pCol.isTrigger = false;
+		//pCol.isTrigger = false;
 	}
 
 	void SwitchToCanMove(){
