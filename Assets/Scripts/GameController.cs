@@ -101,6 +101,7 @@ public class GameController : MonoBehaviour {
 
 		//少し待ってからゲームスタート
 		animator.SetTrigger ("FadeOut");
+		Invoke("ReturnToTitle", 2.2f);
 	}
 		
 	//titleからハイスコアを取得するためのgetter
