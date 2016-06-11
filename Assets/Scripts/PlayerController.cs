@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundlayer;
 	public bool isGrounded = true;
 
+	//サウンド
+	public AudioSource sound;
+
 	void Start () {
 
 		//コンポーネントを取得
@@ -40,7 +43,8 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
-
+		sound = GetComponent<AudioSource> ();
+		//プレイ中フラグ
 		dead = false;
 	}
 
@@ -110,6 +114,7 @@ public class PlayerController : MonoBehaviour {
 			
 			isGrounded = false;
 			rb.velocity = new Vector2 (rb.velocity.x, jumpHeight);
+			//sound.PlayOneShot (sound.clip, 1.0f);
 		}
 
 		//プレイヤーの落下チェック(pos使い回しのためここでチェック)

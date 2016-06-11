@@ -7,9 +7,13 @@ public class Gimmick : MonoBehaviour {
 	public GameObject gimmickObj;
 	public Animator animator;
 
+	//サウンド
+	private AudioSource sound;
+
 	void Start () {
 		
 		animator = gimmickObj.GetComponent<Animator>();
+		sound = GetComponent<AudioSource> ();
 	}
 		
 	void OnTriggerEnter2D(Collider2D col){
@@ -18,6 +22,7 @@ public class Gimmick : MonoBehaviour {
 		//プレイヤーと当たったら,設定しておいたギミックが作動
 		if (layerName == "Chara") {
 			animator.SetTrigger("switch");
+			sound.PlayOneShot (sound.clip, 1.0f);
 
 			Destroy (gimmickObj, 2.0f);
 			Destroy (this);
