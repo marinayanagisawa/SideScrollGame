@@ -48,8 +48,6 @@ public class PlayerController : MonoBehaviour {
 		//サウンド取得
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
 		sound[0] = audiosources [0];
-		sound[1] = audiosources [1];
-		//sound[2] = audiosources [2];
 
 		//プレイ中フラグ
 		dead = false;
@@ -155,6 +153,7 @@ public class PlayerController : MonoBehaviour {
 			
 			//敵を削除
 			Destroy (col.gameObject);
+			gc.SendMessage ("EnemyExplode");
 
 			//ダメージアニメーション中でなければ普通にダメージ処理
 			if (!hitting) {
@@ -176,6 +175,9 @@ public class PlayerController : MonoBehaviour {
 
 			if (!hitting) {
 				Damage ();
+				//ダメージ音を敵のものと使い回し
+				gc.SendMessage ("EnemyExplode");
+
 				if (life < 0) {
 					Dead ();
 				} 
@@ -193,8 +195,7 @@ public class PlayerController : MonoBehaviour {
 		//ライフ値を引く
 		life--;
 		Debug.Log (life);
-		//サウンドを鳴らす
-		sound[1].PlayOneShot (sound[1].clip);
+
 		//ダメージアニメーション設定
 		anim.SetTrigger ("dmg");
 	}

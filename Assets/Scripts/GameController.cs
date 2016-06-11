@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour {
 		//サウンド取得
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
 		sound[0] = audiosources [0];
+		sound[1] = audiosources [1];
 	}
 	
 
@@ -113,6 +114,11 @@ public class GameController : MonoBehaviour {
 	//タイトルに戻る
 	void ReturnToTitle(){
 		SceneManager.LoadScene ("title");
+	}
+
+	//敵の爆発音
+	public void EnemyExplode(){
+		sound[1].PlayOneShot (sound[1].clip);
 	}
 
 }

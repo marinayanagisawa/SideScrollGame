@@ -43,8 +43,9 @@ public class PlayerShot : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
-
+			
 			Debug.Log ("Hit to Enemy!");
+			gc.SendMessage ("EnemyExplode");
 
 			//ヒットした敵オブジェクトを取得
 			GameObject enemy = col.gameObject;
