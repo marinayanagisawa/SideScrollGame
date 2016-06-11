@@ -28,7 +28,10 @@ public class GameController : MonoBehaviour {
 	//トランジション用
 	private Animator animator;
 
-	//Generatorにゲーム中か知らせる
+	//サウンド(AudioClipの数を増やしたら,必ずインスペクタから配列を増やす！)
+	public AudioSource[] sound;
+
+	//Generatorにゲーム中か知らせるフラグ
 	public bool gameOver;
 
 	void Start () {
@@ -54,6 +57,10 @@ public class GameController : MonoBehaviour {
 	
 		//トランジション用のアニメーター取得
 		animator = GameObject.Find ("Black").GetComponent<Animator> ();
+
+		//サウンド取得
+		AudioSource[] audiosources= GetComponents<AudioSource> ();
+		sound[0] = audiosources [0];
 	}
 	
 
@@ -73,6 +80,8 @@ public class GameController : MonoBehaviour {
 
 		//プレイヤーコントローラで死亡フラグを監視して,GameOver()を呼び出す
 		if (pc.dead == true) {
+			//爆発サウンド(エフェクトはPlayerConrtroller)
+			sound[0].PlayOneShot (sound[0].clip);
 			gameOver= true;
 			GameOver();
 		}
@@ -92,7 +101,6 @@ public class GameController : MonoBehaviour {
 
 		//少し待ってからゲームスタート
 		animator.SetTrigger ("FadeOut");
-		Invoke("ReturnToTitle", 2.0f);
 	}
 		
 	//titleからハイスコアを取得するためのgetter

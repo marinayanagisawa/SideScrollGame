@@ -11,7 +11,6 @@ public class PlayerShot : MonoBehaviour {
 
 	public GameObject smoke;
 
-
 	void Start () {
 
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
@@ -28,6 +27,7 @@ public class PlayerShot : MonoBehaviour {
 			Debug.Log ("BackFire!");
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-shotSpeed, 0);
 		}
+
 	}
 
 	void Update () {

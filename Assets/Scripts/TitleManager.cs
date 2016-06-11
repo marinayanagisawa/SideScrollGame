@@ -9,15 +9,22 @@ public class TitleManager : MonoBehaviour {
 	private Animator psAnim;
 	private Text scoreText;
 
+	//サウンド(AudioClipの数を増やしたら,インスペクタから配列数を変更)
+	public AudioSource[] sound;
 
 	void Start () {
 
 		//タイトル画面のアニメーション
 		titleAnim = GameObject.Find ("titleSprite").GetComponent<Animator> ();
 		psAnim = GameObject.Find ("Pressx").GetComponent<Animator> ();
+
 		//画面上にハイスコアを表示
 		scoreText = GameObject.Find ("Highscore").GetComponent<Text> ();
 		Invoke ("WriteScore", 1.0f);
+
+		//サウンド取得
+		AudioSource[] audiosources= GetComponents<AudioSource> ();
+		sound[0] = audiosources [0];
 
 	}
 
@@ -25,9 +32,17 @@ public class TitleManager : MonoBehaviour {
 	
 		//スタート時のタイトルのアニメーションなどを設定
 		if (Input.GetKeyDown (KeyCode.X)) {
+
+			//startサウンドを鳴らす
+			sound[0].PlayOneShot (sound[0].clip);
+
+			//タイトル,文字のアニメーション
 			titleAnim.SetTrigger("started");
 			psAnim.SetTrigger ("pressed");
+
+			//ハイスコアの文字を消す
 			scoreText.text = "";
+
 			Invoke ("LoadGame", 1.7f);
 		}
 	}

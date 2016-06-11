@@ -33,8 +33,9 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask groundlayer;
 	public bool isGrounded = true;
 
-	//サウンド
-	public AudioSource sound;
+	//サウンド(AudioClipの数を増やしたら,必ずインスペクタから配列を増やす！)
+	public AudioSource[] sound;
+
 
 	void Start () {
 
@@ -43,7 +44,13 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
-		sound = GetComponent<AudioSource> ();
+
+		//サウンド取得
+		AudioSource[] audiosources= GetComponents<AudioSource> ();
+		sound[0] = audiosources [0];
+		sound[1] = audiosources [1];
+		//sound[2] = audiosources [2];
+
 		//プレイ中フラグ
 		dead = false;
 	}
@@ -87,6 +94,7 @@ public class PlayerController : MonoBehaviour {
 			
 		//プレイヤーの弾を発射
 		if (Input.GetButtonDown ("Fire1")) {
+
 			//撃てる状態であれば,弾を撃つ
 			if (canShot && canMove) {
 				StartCoroutine (PlayerShot ());
@@ -128,6 +136,10 @@ public class PlayerController : MonoBehaviour {
 	//弾が連射出来ないように,nextShotTime分待つ
 	IEnumerator PlayerShot(){
 		canShot = false;
+
+		//発射音の再生
+		sound[0].PlayOneShot (sound[0].clip);
+
 		Instantiate (shot, muzzle.transform.position, transform.rotation);
 		yield return new WaitForSeconds (nextShotTime);
 		canShot = true;
@@ -147,7 +159,6 @@ public class PlayerController : MonoBehaviour {
 			//ダメージアニメーション中でなければ普通にダメージ処理
 			if (!hitting) {
 				Damage ();
-
 				//ライフが０なら死亡処理
 				if (life < 0) {
 					Dead ();
@@ -165,7 +176,6 @@ public class PlayerController : MonoBehaviour {
 
 			if (!hitting) {
 				Damage ();
-
 				if (life < 0) {
 					Dead ();
 				} 
@@ -183,7 +193,8 @@ public class PlayerController : MonoBehaviour {
 		//ライフ値を引く
 		life--;
 		Debug.Log (life);
-
+		//サウンドを鳴らす
+		sound[1].PlayOneShot (sound[1].clip);
 		//ダメージアニメーション設定
 		anim.SetTrigger ("dmg");
 	}
@@ -194,6 +205,7 @@ public class PlayerController : MonoBehaviour {
 		dead = true;
 		//爆発エフェクト生成
 		Instantiate (smokeR, transform.position, smokeR.transform.rotation);
+		//爆発サウンドは,プレイヤーオブジェクトが消えた後も鳴るよう, GameControllerに移動
 
 		//GameOver処理
 		gc.GameOver ();
