@@ -547,7 +547,6 @@ MonoBehaviour:
   - {fileID: 0}
   gameOver: 0
   clear: 0
-  gp: {fileID: 0}
 --- !u!82 &174993212
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3077,7 +3076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413028, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 193218, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_IsActive
@@ -4513,7 +4512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413028, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 185346, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_Name
@@ -5394,7 +5393,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413028, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 193218, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_IsActive
@@ -5608,7 +5607,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413028, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 185346, guid: cc7f43739afd43c4784083d2adc807de, type: 2}
       propertyPath: m_Name
