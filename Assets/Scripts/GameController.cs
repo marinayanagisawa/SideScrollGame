@@ -34,6 +34,9 @@ public class GameController : MonoBehaviour {
 	//Generatorにゲーム中か知らせるフラグ
 	public bool gameOver;
 
+	//ゴールの到達を受け取る
+	public bool clear = false;
+
 	void Start () {
 
 		gameOver = false;
@@ -55,6 +58,7 @@ public class GameController : MonoBehaviour {
 		//ハイスコアを取得
 		highScore = PlayerPrefs.GetInt (highScoreKey, 0);
 	
+
 		//トランジション用のアニメーター取得
 		animator = GameObject.Find ("Black").GetComponent<Animator> ();
 
@@ -62,6 +66,7 @@ public class GameController : MonoBehaviour {
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
 		sound[0] = audiosources [0];
 		sound[1] = audiosources [1];
+
 	}
 	
 
@@ -86,6 +91,13 @@ public class GameController : MonoBehaviour {
 			gameOver= true;
 			GameOver();
 		}
+
+		//クリアフラグはGoal.csから受け取り,GameClear()を呼び出す
+		if (clear == true) {
+			GameClear ();
+		}
+
+
 	}
 
 	public void GameOver(){
@@ -111,6 +123,24 @@ public class GameController : MonoBehaviour {
 		return getScore;
 	}
 		
+	public void GameClear(){
+		Debug.Log("GameClear(), Called!(from GameContriller)");
+
+		//ハイスコアを保持
+		PlayerPrefs.SetInt (highScoreKey, highScore);
+		PlayerPrefs.Save ();
+
+		//-----------------------------------ToDo
+		//サウンドを鳴らす
+		//スコアの表示（余裕があれば）
+
+		//とりあえずクリア表示（暫定）
+		gameOverText.text = "CLEAR!!";
+		clear = false;
+		animator.SetTrigger ("FadeOut");
+		Invoke("ReturnToTitle", 3.0f);
+	}
+
 	//タイトルに戻る
 	void ReturnToTitle(){
 		SceneManager.LoadScene ("title");
