@@ -4,9 +4,11 @@ using System.Collections;
 public class Goal : MonoBehaviour {
 
 	private GameController gc;
+	private ParticleSystem particle;
 
 	void Start () {
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
+		particle = GameObject.Find ("Particle System").GetComponent<ParticleSystem> ();
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -15,8 +17,8 @@ public class Goal : MonoBehaviour {
 
 		if (layerName == "Chara") {
 			gc.clear = true;
-			//-----------------------------------ToDo
 			//パーティクルを表示
+			particle.Play();
 
 		}
 

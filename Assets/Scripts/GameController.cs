@@ -113,7 +113,6 @@ public class GameController : MonoBehaviour {
 		PlayerPrefs.Save ();
 
 		//少し待ってからゲームスタート
-		animator.SetTrigger ("FadeOut");
 		Invoke("ReturnToTitle", 2.2f);
 	}
 		
@@ -137,12 +136,13 @@ public class GameController : MonoBehaviour {
 		//とりあえずクリア表示（暫定）
 		gameOverText.text = "CLEAR!!";
 		clear = false;
-		animator.SetTrigger ("FadeOut");
-		Invoke("ReturnToTitle", 3.0f);
+
+		Invoke("ReturnToTitle", 3.5f);
 	}
 
-	//タイトルに戻る
+	//フェードアウトしてからタイトルに戻る
 	void ReturnToTitle(){
+		animator.SetTrigger ("FadeOut");
 		SceneManager.LoadScene ("title");
 	}
 
