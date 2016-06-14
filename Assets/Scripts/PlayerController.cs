@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour {
 		//プレイヤーの落下チェック(pos使い回しのためここでチェック)
 		if (pos.y < -5.0f) {
 			//Debug.Log ("Dead flug ON!!");
+			canShot = false;
 			dead = true;
 		}
 	}
