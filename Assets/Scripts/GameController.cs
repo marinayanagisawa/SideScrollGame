@@ -42,6 +42,9 @@ public class GameController : MonoBehaviour {
 	public Text result;
 	public Text resultScore;
 	public Text resultLife;
+	public Text resultLine;
+	public Text resultTotal;
+
 	void Start () {
 
 		gameOver = false;
@@ -132,20 +135,51 @@ public class GameController : MonoBehaviour {
 	public void GameClear(){
 		Debug.Log("GameClear(), Called!(from GameContriller)");
 
-		//ハイスコアを保持
-		PlayerPrefs.SetInt (highScoreKey, highScore);
-		PlayerPrefs.Save ();
-
 		//-----------------------------------ToDo
 		//サウンドを鳴らす
-		//スコアの表示（余裕があれば）
 
 		//クリア表示
 		clearAnim.SetTrigger("Clear");
 
 		clear = false;
 		pc.canMove = false;
-		Invoke("ReturnToTitle", 3.5f);
+
+		//リザルト画面を表示
+		StartCoroutine ("Result");
+
+		//ハイスコアを保持
+		PlayerPrefs.SetInt (highScoreKey, highScore);
+		PlayerPrefs.Save ();
+
+		Invoke("ReturnToTitle", 10.0f);
+	}
+
+	//リザルト処理
+	IEnumerator Result(){
+		//少し待ってからスタート
+		yield return new WaitForSeconds (2.0f);
+		//背景を暗くする
+		animator.SetTrigger ("Back");
+		Debug.Log ("ResultStart!!");
+		yield return new WaitForSeconds (1.0f);
+		//以降リザルトを1行ずつ表示
+		result.text = "RESULT";
+		yield return new WaitForSeconds (1.0f);
+
+		resultScore.text = "Score   " + playScore;
+		yield return new WaitForSeconds (1.0f);
+
+		resultLife.text = "Life   " + (pc.life + 1) * 100;
+		yield return new WaitForSeconds (1.0f);
+
+		resultLine.text = "------------------";
+		yield return new WaitForSeconds (1.0f);
+
+		int total = playScore + (pc.life + 1) * 100;
+		resultTotal.text = "Total   " + total;
+		playScore = total;
+
+		//ハイスコアの更新と保存
 		if (highScore < playScore) {
 			highScore = playScore;
 		}

@@ -120,7 +120,6 @@ public class PlayerController : MonoBehaviour {
 			
 			isGrounded = false;
 			rb.velocity = new Vector2 (rb.velocity.x, jumpHeight);
-			//sound.PlayOneShot (sound.clip, 1.0f);
 		}
 
 		//プレイヤーの落下チェック(pos使い回しのためここでチェック)
@@ -143,7 +142,6 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds (nextShotTime);
 		canShot = true;
 	}
-			
 
 	//敵と接触した場合
 	void OnCollisionEnter2D(Collision2D col){
