@@ -38,6 +38,10 @@ public class GameController : MonoBehaviour {
 	//ゴールの到達を受け取る
 	public bool clear = false;
 
+	//リザルト用（Inspectorから設定）
+	public Text result;
+	public Text resultScore;
+	public Text resultLife;
 	void Start () {
 
 		gameOver = false;
@@ -142,7 +146,16 @@ public class GameController : MonoBehaviour {
 		clear = false;
 		pc.canMove = false;
 		Invoke("ReturnToTitle", 3.5f);
+		if (highScore < playScore) {
+			highScore = playScore;
+		}
+			
+		PlayerPrefs.SetInt (highScoreKey, highScore);
+		PlayerPrefs.Save ();
+
+		yield return new WaitForSeconds (1.0f);
 	}
+
 
 	//フェードアウトしてからタイトルに戻る
 	void ReturnToTitle(){
