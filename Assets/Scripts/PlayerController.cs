@@ -221,10 +221,11 @@ public class PlayerController : MonoBehaviour {
 		hitting = false;
 
 	}
-
+	//ダメージアニメーション終了時に動けるようにする
 	void SwitchToCanMove(){
 		canMove = true;
 	}
+
 
 
 }

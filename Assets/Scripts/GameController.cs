@@ -136,7 +136,7 @@ public class GameController : MonoBehaviour {
 		//とりあえずクリア表示（暫定）
 		gameOverText.text = "CLEAR!!";
 		clear = false;
-
+		pc.canMove = false;
 		Invoke("ReturnToTitle", 3.5f);
 	}
 
