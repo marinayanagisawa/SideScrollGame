@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour {
 
 	//トランジション用
 	private Animator animator;
+	private Animator clearAnim;
 
 	//サウンド(AudioClipの数を増やしたら,必ずインスペクタから配列を増やす！)
 	public AudioSource[] sound;
@@ -61,6 +62,8 @@ public class GameController : MonoBehaviour {
 
 		//トランジション用のアニメーター取得
 		animator = GameObject.Find ("Black").GetComponent<Animator> ();
+		//クリア表示用のアニメーター取得
+		clearAnim = GameObject.Find ("Clear").GetComponent<Animator> ();
 
 		//サウンド取得
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
@@ -133,8 +136,9 @@ public class GameController : MonoBehaviour {
 		//サウンドを鳴らす
 		//スコアの表示（余裕があれば）
 
-		//とりあえずクリア表示（暫定）
-		gameOverText.text = "CLEAR!!";
+		//クリア表示
+		clearAnim.SetTrigger("Clear");
+
 		clear = false;
 		pc.canMove = false;
 		Invoke("ReturnToTitle", 3.5f);
