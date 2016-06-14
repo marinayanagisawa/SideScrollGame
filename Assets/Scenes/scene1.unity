@@ -1656,7 +1656,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481226317}
   - 61: {fileID: 481226318}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1702,7 +1702,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 489479810}
   - 61: {fileID: 489479811}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
