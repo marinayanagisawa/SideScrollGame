@@ -76,7 +76,7 @@ public class GameController : MonoBehaviour {
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
 		sound[0] = audiosources [0];
 		sound[1] = audiosources [1];
-
+		sound[2] = audiosources [2];
 	}
 	
 
@@ -166,15 +166,18 @@ public class GameController : MonoBehaviour {
 		result.text = "RESULT";
 		yield return new WaitForSeconds (1.0f);
 
+		sound[2].PlayOneShot (sound[2].clip);
 		resultScore.text = "Score   " + playScore;
 		yield return new WaitForSeconds (1.0f);
 
+		sound[2].PlayOneShot (sound[2].clip);
 		resultLife.text = "Life   " + (pc.life + 1) * 100;
 		yield return new WaitForSeconds (1.0f);
 
 		resultLine.text = "_________";
 		yield return new WaitForSeconds (1.0f);
 
+		sound[2].PlayOneShot (sound[2].clip);
 		int total = playScore + (pc.life + 1) * 100;
 		resultTotal.text = "Total   " + total;
 		playScore = total;
