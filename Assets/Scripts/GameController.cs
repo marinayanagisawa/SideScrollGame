@@ -172,7 +172,7 @@ public class GameController : MonoBehaviour {
 		resultLife.text = "Life   " + (pc.life + 1) * 100;
 		yield return new WaitForSeconds (1.0f);
 
-		resultLine.text = "------------------";
+		resultLine.text = "_________";
 		yield return new WaitForSeconds (1.0f);
 
 		int total = playScore + (pc.life + 1) * 100;
