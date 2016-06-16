@@ -72,11 +72,13 @@ public class GameController : MonoBehaviour {
 		//クリア表示用のアニメーター取得
 		clearAnim = GameObject.Find ("Clear").GetComponent<Animator> ();
 
-		//サウンド取得
+		//サウンド取得(インスペクタから増やしたら,その分を取得する)
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
 		sound[0] = audiosources [0];
 		sound[1] = audiosources [1];
 		sound[2] = audiosources [2];
+		sound[3] = audiosources [3];
+
 	}
 	
 
@@ -111,9 +113,12 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void GameOver(){
+
 		//Debug.Log ("GameOver(), Called!! Score =" + playScore);
 		//ゲームオーバーのテキスト表示
 		gameOverText.text = "GameOver";
+
+		sound [3].Stop ();
 
 		//落下演出のため,カメラ（子要素）を切り離して終了
 		robo.transform.DetachChildren ();

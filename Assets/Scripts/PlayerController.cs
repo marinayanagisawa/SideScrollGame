@@ -199,7 +199,7 @@ public class PlayerController : MonoBehaviour {
 		anim.SetTrigger ("dmg");
 	}
 
-
+	//死亡処理
 	void Dead(){
 		
 		dead = true;

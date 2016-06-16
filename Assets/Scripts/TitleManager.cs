@@ -22,16 +22,19 @@ public class TitleManager : MonoBehaviour {
 		scoreText = GameObject.Find ("Highscore").GetComponent<Text> ();
 		Invoke ("WriteScore", 1.0f);
 
-		//サウンド取得
+		//サウンド取得(増やした配列分を取得するよう書き換える)
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
 		sound[0] = audiosources [0];
+		sound[1] = audiosources [1];
 
+		Invoke ("Bgm", 1.0f);
 	}
 
 	void Update () {
 	
 		//スタート時のタイトルのアニメーションなどを設定
 		if (Input.GetKeyDown (KeyCode.X)) {
+			sound [1].Stop ();
 
 			//startサウンドを鳴らす
 			sound[0].PlayOneShot (sound[0].clip);
@@ -57,6 +60,11 @@ public class TitleManager : MonoBehaviour {
 	//ゲームシーン呼び出し
 	private void LoadGame(){
 		SceneManager.LoadScene("scene1");
+	}
+
+	//BGM再生
+	private void Bgm(){
+		sound [1].Play ();
 	}
 
 	#if UNITY_EDITOR
