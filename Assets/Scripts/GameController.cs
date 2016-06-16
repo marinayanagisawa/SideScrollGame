@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour {
 	//スコア表示用
 	private Text scoreText;
 	private Text highScoreText;
+	//public GameObject newScore;
 
 	//playerPrefsのキー
 	public static string highScoreKey = "HighScore";
@@ -27,7 +28,9 @@ public class GameController : MonoBehaviour {
 
 	//トランジション用
 	private Animator animator;
+
 	private Animator clearAnim;
+	private Animator newScoreAnim;
 
 	//サウンド(AudioClipの数を増やしたら,必ずインスペクタから配列を増やす！)
 	public AudioSource[] sound;
@@ -65,12 +68,12 @@ public class GameController : MonoBehaviour {
 
 		//ハイスコアを取得
 		highScore = PlayerPrefs.GetInt (highScoreKey, 0);
-	
 
 		//トランジション用のアニメーター取得
 		animator = GameObject.Find ("Black").GetComponent<Animator> ();
 		//クリア表示用のアニメーター取得
 		clearAnim = GameObject.Find ("Clear").GetComponent<Animator> ();
+		newScoreAnim = GameObject.Find ("newScoreImage").GetComponent <Animator> ();
 
 		//サウンド取得(インスペクタから増やしたら,その分を取得する)
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
@@ -189,6 +192,7 @@ public class GameController : MonoBehaviour {
 
 		//ハイスコアの更新と保存
 		if (highScore < playScore) {
+			newScoreAnim.SetTrigger ("New");
 			highScore = playScore;
 		}
 			
