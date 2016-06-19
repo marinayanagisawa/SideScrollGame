@@ -53,7 +53,7 @@ public class TitleManager : MonoBehaviour {
 	//ハイスコアの表示
 	public void WriteScore(){
 		int setHighScore = GameController.GetHighScore ();
-		scoreText.text = "HighScore " + setHighScore.ToString();
+		scoreText.text = "HIGH SCORE " + setHighScore.ToString();
 	}
 
 

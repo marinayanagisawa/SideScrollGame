@@ -93,8 +93,8 @@ public class GameController : MonoBehaviour {
 		}
 
 		//スコア表示
-		scoreText.text = "Score : " + playScore;
-		highScoreText.text = "High Score : " + highScore;
+		scoreText.text = "SCORE : " + playScore;
+		highScoreText.text = "HIGH SCORE : " + highScore;
 
 		//ライフ表示
 		slider.value = (pc.life + 1);
@@ -119,7 +119,7 @@ public class GameController : MonoBehaviour {
 
 		//Debug.Log ("GameOver(), Called!! Score =" + playScore);
 		//ゲームオーバーのテキスト表示
-		gameOverText.text = "GameOver";
+		gameOverText.text = "GAME OVER";
 
 		sound [3].Stop ();
 
@@ -175,11 +175,11 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (1.0f);
 
 		sound[2].PlayOneShot (sound[2].clip);
-		resultScore.text = "Score   " + playScore;
+		resultScore.text = "SCORE   " + playScore;
 		yield return new WaitForSeconds (1.0f);
 
 		sound[2].PlayOneShot (sound[2].clip);
-		resultLife.text = "Life   " + (pc.life + 1) * 100;
+		resultLife.text = "LIFE   " + (pc.life + 1) * 100;
 		yield return new WaitForSeconds (1.0f);
 
 		resultLine.text = "_________";
@@ -187,7 +187,7 @@ public class GameController : MonoBehaviour {
 
 		sound[2].PlayOneShot (sound[2].clip);
 		int total = playScore + (pc.life + 1) * 100;
-		resultTotal.text = "Total   " + total;
+		resultTotal.text = "TOTAL   " + total;
 		playScore = total;
 
 		//ハイスコアの更新と保存
