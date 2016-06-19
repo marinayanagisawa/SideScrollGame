@@ -33,7 +33,7 @@ public class TitleManager : MonoBehaviour {
 	void Update () {
 	
 		//スタート時のタイトルのアニメーションなどを設定
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetButtonDown ("Fire1")) {
 			sound [1].Stop ();
 
 			//startサウンドを鳴らす
