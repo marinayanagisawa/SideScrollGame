@@ -8,6 +8,7 @@ public class TitleManager : MonoBehaviour {
 	private Animator titleAnim;
 	private Animator psAnim;
 	private Text scoreText;
+	private bool start = false;
 
 	//サウンド(AudioClipの数を増やしたら,インスペクタから配列数を変更)
 	public AudioSource[] sound;
@@ -32,21 +33,28 @@ public class TitleManager : MonoBehaviour {
 
 	void Update () {
 	
-		//スタート時のタイトルのアニメーションなどを設定
-		if (Input.GetButtonDown ("Fire1")) {
-			sound [1].Stop ();
+		if (start == false) {
+			//スタート処理
+			if (Input.GetButtonDown ("Fire1")) {
 
-			//startサウンドを鳴らす
-			sound[0].PlayOneShot (sound[0].clip);
+				//ボタン連射に対応
+				start = true;
 
-			//タイトル,文字のアニメーション
-			titleAnim.SetTrigger("started");
-			psAnim.SetTrigger ("pressed");
+				//BGMを消す
+				sound [1].Stop ();
 
-			//ハイスコアの文字を消す
-			scoreText.text = "";
+				//startサウンドを鳴らす
+				sound [0].PlayOneShot (sound [0].clip);
 
-			Invoke ("LoadGame", 1.7f);
+				//タイトル,文字のアニメーション
+				titleAnim.SetTrigger ("started");
+				psAnim.SetTrigger ("pressed");
+
+				//ハイスコアの文字を消す
+				scoreText.text = "";
+
+				Invoke ("LoadGame", 1.7f);
+			}
 		}
 	}
 
