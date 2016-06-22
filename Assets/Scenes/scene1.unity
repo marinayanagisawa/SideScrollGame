@@ -4497,9 +4497,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09350ebcdf1120f41a77d78c304d4aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1142430372}
+  cameraObj: {fileID: 1142430372}
   shakeOn: 0
   shakeOnM: 0
+  shakeOnL: 0
 --- !u!4 &1183028860
 Transform:
   m_ObjectHideFlags: 0
@@ -6605,7 +6606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1816649531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6835,6 +6836,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1864055367}
   - 61: {fileID: 1864055366}
+  - 114: {fileID: 1864055368}
   m_Layer: 0
   m_Name: shakePoint1
   m_TagString: Untagged
@@ -6851,7 +6853,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0.84}
   serializedVersion: 2
@@ -6863,11 +6865,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864055365}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 135.7, y: 3.6893942, z: 0}
+  m_LocalPosition: {x: 137.67, y: 3.6893942, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &1864055368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864055365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2628ad46247778b458bd8e4179d59ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: 1
+  m: 0
+  l: 0
 --- !u!1 &1879269388
 GameObject:
   m_ObjectHideFlags: 0
@@ -9072,6 +9088,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2002009700}
   - 61: {fileID: 2002009699}
+  - 114: {fileID: 2002009701}
   m_Layer: 0
   m_Name: shakePoint2
   m_TagString: Untagged
@@ -9088,7 +9105,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0.84}
   serializedVersion: 2
@@ -9100,11 +9117,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2002009698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 144.11, y: 3.6893942, z: 0}
+  m_LocalPosition: {x: 146.05, y: 3.6893942, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!114 &2002009701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002009698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2628ad46247778b458bd8e4179d59ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: 0
+  m: 1
+  l: 0
 --- !u!1 &2018749099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9281,6 +9312,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2078796268}
   - 61: {fileID: 2078796267}
+  - 114: {fileID: 2078796269}
   m_Layer: 0
   m_Name: shakePoint3
   m_TagString: Untagged
@@ -9297,7 +9329,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0.84}
   serializedVersion: 2
@@ -9309,11 +9341,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2078796266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 152.01, y: 3.6893942, z: 0}
+  m_LocalPosition: {x: 154.45, y: 3.6893942, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &2078796269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2078796266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2628ad46247778b458bd8e4179d59ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: 0
+  m: 0
+  l: 1
 --- !u!1 &2083748054
 GameObject:
   m_ObjectHideFlags: 0
