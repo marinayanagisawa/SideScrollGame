@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour {
 	public GameObject muzzle;
 	public GameObject shot;
 
+	public float shotPower = 10.0f;
+
 	//接地判定に使用
 	public LayerMask groundlayer;
 	public bool isGrounded = true;

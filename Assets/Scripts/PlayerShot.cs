@@ -5,6 +5,7 @@ public class PlayerShot : MonoBehaviour {
 
 	public float shotSpeed = 10.0f;
 	public float shotLifeTime = 1.5f;
+	//public float shotPower = 10.0f;
 
 	private PlayerController pc;
 	private GameController gc;
@@ -15,8 +16,7 @@ public class PlayerShot : MonoBehaviour {
 
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 		GetComponent<ParticleSystem> ().Stop ();
-
-		//プレイヤーの状態を取得
+	
 		pc = GameObject.Find ("robo").GetComponent<PlayerController> ();
 	
 		//プレイヤーの向きを見て飛ぶ方向を変更
@@ -45,20 +45,21 @@ public class PlayerShot : MonoBehaviour {
 		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
 			
 			Debug.Log ("Hit to Enemy!");
+			//音を再生する
 			gc.SendMessage ("EnemyExplode");
 
 			//ヒットした敵オブジェクトを取得
 			GameObject enemy = col.gameObject;
 
 				//敵に設定されたスコアにアクセス
-				int count = enemy.transform.parent.GetComponent<Enemy> ().score;
+				//int count = enemy.transform.parent.GetComponent<Enemy> ().score;
 				//Debug.Log (count);
 				//スコアをGameControllerのスコア合計に追加
-				gc.playScore += count;
+				//gc.playScore += count;
 
 			//エフェクトを生成
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
-			Destroy (col.gameObject);
+			//Destroy (col.gameObject);
 			Destroy (this.gameObject);
 
 		}

@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21217914}
   - 58: {fileID: 5829842}
   - 58: {fileID: 5842358}
+  - 114: {fileID: 11431478}
   m_Layer: 10
   m_Name: EnemySprite
   m_TagString: Untagged
@@ -137,7 +138,21 @@ MonoBehaviour:
   moveSpeed: 3
   score: 10
   lifetime: 10
+  hp: 10
+  pc: {fileID: 0}
+  gc: {fileID: 0}
   isGrounded: 0
+--- !u!114 &11431478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50e581e725877a42b15bb1f62f14204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21217914
 SpriteRenderer:
   m_ObjectHideFlags: 1
