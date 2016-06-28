@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
 	void Start(){
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 		pc = GameObject.Find ("robo").GetComponent<PlayerController> ();
+
 	}
 		
 	//移動処理
@@ -32,14 +33,10 @@ public class Enemy : MonoBehaviour {
 			//hp = hp - pc.shotPower; 
 			hp = hp - 10.0f;
 	
-			if (hp >= 0){
-			
-				//ヒットした敵オブジェクトを取得
-				//GameObject enemy = col.gameObject;
+			if (hp <= 0){
 
 				//敵に設定されたスコアにアクセス
 				int count = score;
-				//int count = enemy.transform.parent.GetComponent<Enemy> ().score;
 				Debug.Log (count);
 				//スコアをGameControllerのスコア合計に追加
 				//gc.playScore += count;

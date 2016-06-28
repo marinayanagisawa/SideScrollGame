@@ -138,7 +138,7 @@ MonoBehaviour:
   moveSpeed: 3
   score: 10
   lifetime: 10
-  hp: 10
+  hp: 20
   pc: {fileID: 0}
   gc: {fileID: 0}
   isGrounded: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50e581e725877a42b15bb1f62f14204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
 --- !u!212 &21217914
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -39,7 +39,7 @@ public class PlayerShot : MonoBehaviour {
 		
 	void OnTriggerEnter2D(Collider2D col){
 
-		//敵と弾が当たった時のみ,両方を消滅させる
+		//敵と弾が当たった時の音とエフェクトの処理
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
@@ -59,7 +59,6 @@ public class PlayerShot : MonoBehaviour {
 
 			//エフェクトを生成
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
-			//Destroy (col.gameObject);
 			Destroy (this.gameObject);
 
 		}
