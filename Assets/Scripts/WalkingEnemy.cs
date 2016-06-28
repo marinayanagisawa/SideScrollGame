@@ -5,8 +5,6 @@ public class WalkingEnemy : Enemy {
 
 	public bool isGrounded;
 
-
-
 	void Start () {
 
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
@@ -37,14 +35,15 @@ public class WalkingEnemy : Enemy {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "shot") {
-			Debug.Log ("FromOnTreggerEnter2D come!!");
+
 			//-----------------------ToDo
 			//ダメージアニメーション（赤点滅など）
 
+			//ダメージ計算
 			hp = hp - pc.shotPower; 
 
+			//倒した場合の処理
 			if (hp <= 0){
-
 				int count = score;
 				Debug.Log (count);
 				//スコアをGameControllerのスコア合計に追加

@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour {
 	//ゲームオーバー表示用
 	public Text gameOverText;
 
-	//スコア合計用（スコア計算本体は,PlayerShotのほうで,衝突判定時に一緒に行っている）
+	//スコア合計用（スコア計算本体は,Enemyの子クラスで,衝突判定時行う）
 	public int playScore;
 	public int highScore;
 

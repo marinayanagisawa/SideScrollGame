@@ -9,7 +9,7 @@ public class ColliderChild : MonoBehaviour {
 		parent = transform.parent.gameObject;
 	}
 
-	//衝突判定のみ行い,処理はEnemy.csで
+	//衝突判定のみ行い,処理はそれぞれのEnemyの子クラスで
 	void OnTriggerEnter2D(Collider2D col){
 		parent.SendMessage ("FromOnTriggerEnter2D", col);
 	}
