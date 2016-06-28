@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
 	protected PlayerController pc;
 	protected GameController gc;
 
+	protected Animator animator;
 		
 	//移動処理
 	public void Move(){

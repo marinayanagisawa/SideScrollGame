@@ -7409,6 +7409,7 @@ MonoBehaviour:
   nextShotTime: 0.5
   muzzle: {fileID: 1159593867}
   shot: {fileID: 176260, guid: efa7e287aac3c0645b255ec23de35891, type: 2}
+  shotPower: 10
   groundlayer:
     serializedVersion: 2
     m_Bits: 512

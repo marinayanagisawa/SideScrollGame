@@ -9,7 +9,7 @@ public class WalkingEnemy : Enemy {
 
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 		pc = GameObject.Find ("robo").GetComponent<PlayerController> ();
-
+		animator = GetComponent<Animator> ();
 		Destroy (this.gameObject, lifetime);
 	}
 	
@@ -36,8 +36,8 @@ public class WalkingEnemy : Enemy {
 
 		if (layerName == "shot") {
 
-			//-----------------------ToDo
-			//ダメージアニメーション（赤点滅など）
+			//ダメージアニメーション
+			animator.SetTrigger("hit");
 
 			//ダメージ計算
 			hp = hp - pc.shotPower; 
