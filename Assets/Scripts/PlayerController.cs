@@ -216,7 +216,6 @@ public class PlayerController : MonoBehaviour {
 		Destroy (this.gameObject);
 	}
 
-
 	//ダメージアニメーション終了後に呼び出す(アニメーション終了フラグ)
 	public void FinishHitting(){
 		hitting = false;

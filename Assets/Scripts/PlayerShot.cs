@@ -30,7 +30,6 @@ public class PlayerShot : MonoBehaviour {
 	}
 
 	void Update () {
-
 		//弾の消去
 		Destroy (gameObject, shotLifeTime);
 	

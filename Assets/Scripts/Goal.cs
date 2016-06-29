@@ -11,6 +11,7 @@ public class Goal : MonoBehaviour {
 		particle = GameObject.Find ("Particle System").GetComponent<ParticleSystem> ();
 	}
 
+	//ゴールのポイントに触れるとクリア
 	void OnTriggerEnter2D(Collider2D col){
 
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);

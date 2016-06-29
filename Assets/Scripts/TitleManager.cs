@@ -63,8 +63,7 @@ public class TitleManager : MonoBehaviour {
 		int setHighScore = GameController.GetHighScore ();
 		scoreText.text = "HIGH SCORE " + setHighScore.ToString();
 	}
-
-
+		
 	//ゲームシーン呼び出し
 	private void LoadGame(){
 		SceneManager.LoadScene("scene1");
@@ -75,8 +74,9 @@ public class TitleManager : MonoBehaviour {
 		sound [1].Play ();
 	}
 
+
 	#if UNITY_EDITOR
-	//デバック用ボタン
+	//ハイスコアの消去ボタン（デバッグ専用）
 	void OnGUI(){
 		if (GUI.Button(new Rect(0,0,100,50),"Reset")){
 			//保存データを初期化
