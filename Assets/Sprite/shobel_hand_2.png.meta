@@ -1,0 +1,376 @@
+fileFormatVersion: 2
+guid: ed8d607512a5ce543b9d5d54b2cebda9
+timeCreated: 1468214281
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: shobel_hand_2_0
+    21300002: shobel_hand_2_1
+    21300004: shobel_hand_2_2
+    21300006: shobel_hand_2_3
+    21300008: shobel_hand_2_4
+    21300010: shobel_hand_2_5
+    21300012: shobel_hand_2_6
+    21300014: shobel_hand_2_7
+    21300016: shobel_hand_2_8
+    21300018: shobel_hand_2_9
+    21300020: shobel_hand_2_10
+    21300022: shobel_hand_2_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: shobel_hand_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 8}
+        - {x: -5, y: 13}
+        - {x: -5, y: 166}
+        - {x: -114, y: 189}
+        - {x: -375, y: 189}
+        - {x: -375, y: 133}
+        - {x: -209, y: 14}
+        - {x: -201, y: 8}
+        - {x: -162, y: 8}
+        - {x: -137, y: 37}
+        - {x: -119, y: 8}
+    - name: shobel_hand_2_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 8}
+        - {x: -5, y: 14}
+        - {x: -5, y: 68}
+        - {x: -6, y: 75}
+        - {x: -58, y: 129}
+        - {x: -154, y: 178}
+        - {x: -326, y: 178}
+        - {x: -384, y: 171}
+        - {x: -384, y: 118}
+        - {x: -213, y: 10}
+        - {x: -210, y: 8}
+        - {x: -162, y: 8}
+        - {x: -137, y: 37}
+        - {x: -123, y: 8}
+    - name: shobel_hand_2_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 96}
+        - {x: -130, y: 168}
+        - {x: -326, y: 168}
+        - {x: -392, y: 150}
+        - {x: -392, y: 63}
+        - {x: -296, y: 8}
+        - {x: -117, y: 8}
+        - {x: -115, y: 11}
+        - {x: -21, y: 8}
+        - {x: -5, y: 10}
+      - - {x: -11, y: 300}
+        - {x: -12, y: 299}
+        - {x: -11, y: 296}
+        - {x: -7, y: 296}
+        - {x: -3, y: 299}
+        - {x: -3, y: 300}
+    - name: shobel_hand_2_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 124}
+        - {x: -191, y: 162}
+        - {x: -249, y: 162}
+        - {x: -332, y: 144}
+        - {x: -398, y: 125}
+        - {x: -399, y: 120}
+        - {x: -399, y: 98}
+        - {x: -356, y: 88}
+        - {x: -211, y: 8}
+        - {x: -21, y: 8}
+        - {x: -5, y: 10}
+        - {x: -5, y: 77}
+    - name: shobel_hand_2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 8}
+        - {x: -5, y: 10}
+        - {x: -5, y: 50}
+        - {x: -14, y: 71}
+        - {x: -44, y: 120}
+        - {x: -194, y: 162}
+        - {x: -235, y: 162}
+        - {x: -375, y: 115}
+        - {x: -404, y: 102}
+        - {x: -404, y: 51}
+        - {x: -239, y: 8}
+        - {x: -162, y: 8}
+        - {x: -137, y: 37}
+        - {x: -114, y: 13}
+        - {x: -101, y: 8}
+    - name: shobel_hand_2_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -302, y: 162}
+        - {x: -388, y: 108}
+        - {x: -408, y: 87}
+        - {x: -408, y: 62}
+        - {x: -375, y: 53}
+        - {x: -302, y: 71}
+        - {x: -211, y: 12}
+        - {x: -204, y: 8}
+        - {x: -5, y: 8}
+        - {x: -5, y: 109}
+        - {x: -135, y: 162}
+    - name: shobel_hand_2_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -80, y: 11}
+        - {x: -21, y: 8}
+        - {x: -5, y: 8}
+        - {x: -5, y: 68}
+        - {x: -24, y: 119}
+        - {x: -167, y: 162}
+        - {x: -263, y: 162}
+        - {x: -411, y: 64}
+        - {x: -411, y: 49}
+        - {x: -406, y: 44}
+        - {x: -381, y: 35}
+        - {x: -336, y: 45}
+        - {x: -226, y: 8}
+        - {x: -162, y: 8}
+        - {x: -137, y: 37}
+        - {x: -112, y: 16}
+        - {x: -93, y: 11}
+    - name: shobel_hand_2_7
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 70}
+        - {x: -26, y: 116}
+        - {x: -168, y: 162}
+        - {x: -237, y: 162}
+        - {x: -248, y: 123}
+        - {x: -412, y: 51}
+        - {x: -412, y: 14}
+        - {x: -246, y: 22}
+        - {x: -226, y: 8}
+        - {x: -5, y: 8}
+      - - {x: -447, y: 13}
+        - {x: -447, y: 16}
+        - {x: -450, y: 17}
+        - {x: -450, y: 12}
+      - - {x: -437, y: 290}
+        - {x: -442, y: 286}
+        - {x: -443, y: 282}
+        - {x: -441, y: 280}
+        - {x: -437, y: 280}
+        - {x: -434, y: 283}
+        - {x: -433, y: 288}
+        - {x: -435, y: 290}
+    - name: shobel_hand_2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 10}
+        - {x: -5, y: 98}
+        - {x: -87, y: 162}
+        - {x: -258, y: 162}
+        - {x: -407, y: 38}
+        - {x: -407, y: 8}
+        - {x: -100, y: 8}
+        - {x: -93, y: 11}
+        - {x: -80, y: 11}
+        - {x: -21, y: 8}
+    - name: shobel_hand_2_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 8}
+        - {x: -5, y: 77}
+        - {x: -58, y: 124}
+        - {x: -189, y: 162}
+        - {x: -240, y: 162}
+        - {x: -391, y: 40}
+        - {x: -391, y: 19}
+        - {x: -385, y: 9}
+        - {x: -353, y: 14}
+        - {x: -313, y: 35}
+        - {x: -228, y: 8}
+        - {x: -162, y: 8}
+        - {x: -137, y: 37}
+        - {x: -114, y: 13}
+        - {x: -63, y: 8}
+    - name: shobel_hand_2_10
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -133, y: 23}
+        - {x: -102, y: 8}
+        - {x: -21, y: 8}
+        - {x: -5, y: 14}
+        - {x: -5, y: 42}
+        - {x: -24, y: 117}
+        - {x: -161, y: 162}
+        - {x: -250, y: 162}
+        - {x: -365, y: 47}
+        - {x: -365, y: 18}
+        - {x: -348, y: 8}
+        - {x: -168, y: 8}
+        - {x: -154, y: 17}
+        - {x: -147, y: 36}
+        - {x: -152, y: 46}
+      - - {x: -15, y: 300}
+        - {x: -16, y: 299}
+        - {x: -16, y: 295}
+        - {x: -14, y: 294}
+        - {x: -11, y: 294}
+        - {x: -8, y: 299}
+        - {x: -8, y: 300}
+    - name: shobel_hand_2_11
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -330, y: 185}
+        - {x: -330, y: 29}
+        - {x: -326, y: 24}
+        - {x: -320, y: 20}
+        - {x: -315, y: 21}
+        - {x: -290, y: 31}
+        - {x: -263, y: 8}
+        - {x: -16, y: 8}
+        - {x: -5, y: 13}
+        - {x: -5, y: 185}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: e4c6b289fa49b3048bb5e9d7efd56591
+timeCreated: 1468214308
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: shobel_shobel_1_0
+    21300002: shobel_shobel_1_1
+    21300004: shobel_shobel_1_2
+    21300006: shobel_shobel_1_3
+    21300008: shobel_shobel_1_4
+    21300010: shobel_shobel_1_5
+    21300012: shobel_shobel_1_6
+    21300014: shobel_shobel_1_7
+    21300016: shobel_shobel_1_8
+    21300018: shobel_shobel_1_9
+    21300020: shobel_shobel_1_10
+    21300022: shobel_shobel_1_11
+    21300024: shobel_shobel_1_12
+    21300026: shobel_shobel_1_13
+    21300028: shobel_shobel_1_14
+    21300030: shobel_shobel_1_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: shobel_shobel_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -441, y: 0}
+        - {x: -436, y: 0}
+        - {x: -436, y: 2}
+        - {x: -438, y: 4}
+        - {x: -441, y: 3}
+      - - {x: -111, y: 196}
+        - {x: -230, y: 196}
+        - {x: -309, y: 91}
+        - {x: -309, y: 19}
+        - {x: -305, y: 17}
+        - {x: -267, y: 35}
+        - {x: -186, y: 17}
+        - {x: -155, y: 38}
+        - {x: -153, y: 50}
+        - {x: -127, y: 27}
+        - {x: -104, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 13}
+        - {x: -5, y: 74}
+        - {x: -46, y: 143}
+    - name: shobel_shobel_1_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 900
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -233, y: 196}
+        - {x: -309, y: 87}
+        - {x: -309, y: 20}
+        - {x: -305, y: 17}
+        - {x: -267, y: 35}
+        - {x: -226, y: 90}
+        - {x: -229, y: 92}
+        - {x: -222, y: 98}
+        - {x: -222, y: 99}
+        - {x: -227, y: 88}
+        - {x: -233, y: 79}
+        - {x: -237, y: 53}
+        - {x: -222, y: 11}
+        - {x: -5, y: 11}
+        - {x: -5, y: 79}
+        - {x: -116, y: 196}
+      - - {x: -440, y: 18}
+        - {x: -437, y: 19}
+        - {x: -437, y: 22}
+        - {x: -440, y: 23}
+        - {x: -442, y: 21}
+    - name: shobel_shobel_1_2
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 900
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -113, y: 206}
+        - {x: -198, y: 206}
+        - {x: -291, y: 134}
+        - {x: -309, y: 56}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -270, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 14}
+        - {x: -5, y: 75}
+        - {x: -83, y: 181}
+    - name: shobel_shobel_1_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 900
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -133, y: 215}
+        - {x: -171, y: 215}
+        - {x: -198, y: 196}
+        - {x: -211, y: 186}
+        - {x: -266, y: 117}
+        - {x: -309, y: 45}
+        - {x: -309, y: 11}
+        - {x: -9, y: 11}
+        - {x: -5, y: 20}
+        - {x: -5, y: 50}
+        - {x: -28, y: 111}
+    - name: shobel_shobel_1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -207, y: 221}
+        - {x: -216, y: 220}
+        - {x: -309, y: 60}
+        - {x: -309, y: 23}
+        - {x: -305, y: 17}
+        - {x: -267, y: 35}
+        - {x: -179, y: 101}
+        - {x: -179, y: 105}
+        - {x: -181, y: 107}
+        - {x: -124, y: 52}
+        - {x: -117, y: 11}
+        - {x: -9, y: 11}
+        - {x: -5, y: 21}
+        - {x: -5, y: 46}
+        - {x: -82, y: 221}
+      - - {x: -440, y: 299}
+        - {x: -442, y: 296}
+        - {x: -442, y: 285}
+        - {x: -440, y: 284}
+        - {x: -436, y: 285}
+        - {x: -436, y: 299}
+    - name: shobel_shobel_1_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -157, y: 224}
+        - {x: -223, y: 211}
+        - {x: -309, y: 46}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -267, y: 35}
+        - {x: -112, y: 16}
+        - {x: -93, y: 11}
+        - {x: -9, y: 11}
+        - {x: -5, y: 21}
+        - {x: -5, y: 52}
+        - {x: -57, y: 224}
+      - - {x: -15, y: 294}
+        - {x: -13, y: 292}
+        - {x: -10, y: 293}
+        - {x: -9, y: 298}
+        - {x: -11, y: 300}
+        - {x: -14, y: 299}
+    - name: shobel_shobel_1_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -126, y: 224}
+        - {x: -195, y: 208}
+        - {x: -267, y: 118}
+        - {x: -309, y: 45}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -267, y: 35}
+        - {x: -112, y: 16}
+        - {x: -93, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 16}
+        - {x: -5, y: 73}
+        - {x: -60, y: 224}
+    - name: shobel_shobel_1_7
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 600
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -205, y: 223}
+        - {x: -309, y: 59}
+        - {x: -309, y: 23}
+        - {x: -305, y: 17}
+        - {x: -267, y: 35}
+        - {x: -241, y: 69}
+        - {x: -112, y: 16}
+        - {x: -93, y: 11}
+        - {x: -9, y: 11}
+        - {x: -5, y: 20}
+        - {x: -5, y: 58}
+        - {x: -46, y: 223}
+    - name: shobel_shobel_1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -201, y: 236}
+        - {x: -211, y: 234}
+        - {x: -233, y: 224}
+        - {x: -309, y: 47}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -266, y: 34}
+        - {x: -185, y: 150}
+        - {x: -118, y: 11}
+        - {x: -5, y: 11}
+        - {x: -5, y: 114}
+        - {x: -8, y: 165}
+        - {x: -77, y: 231}
+        - {x: -129, y: 236}
+    - name: shobel_shobel_1_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -450, y: 11}
+        - {x: -449, y: 11}
+        - {x: -446, y: 14}
+        - {x: -447, y: 17}
+        - {x: -450, y: 17}
+      - - {x: -154, y: 245}
+        - {x: -246, y: 245}
+        - {x: -309, y: 51}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -266, y: 34}
+        - {x: -185, y: 150}
+        - {x: -133, y: 97}
+        - {x: -117, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 16}
+        - {x: -5, y: 70}
+        - {x: -75, y: 230}
+    - name: shobel_shobel_1_10
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -74, y: 254}
+        - {x: -248, y: 254}
+        - {x: -247, y: 225}
+        - {x: -231, y: 190}
+        - {x: -309, y: 46}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -266, y: 34}
+        - {x: -185, y: 150}
+        - {x: -118, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 16}
+        - {x: -5, y: 73}
+        - {x: -66, y: 253}
+    - name: shobel_shobel_1_11
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 300
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -168, y: 264}
+        - {x: -233, y: 264}
+        - {x: -263, y: 248}
+        - {x: -246, y: 208}
+        - {x: -234, y: 206}
+        - {x: -193, y: 200}
+        - {x: -120, y: 186}
+        - {x: -183, y: 197}
+        - {x: -198, y: 196}
+        - {x: -206, y: 189}
+        - {x: -266, y: 117}
+        - {x: -309, y: 45}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -266, y: 34}
+        - {x: -130, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 15}
+        - {x: -5, y: 68}
+        - {x: -82, y: 227}
+      - - {x: -429, y: 282}
+        - {x: -433, y: 277}
+        - {x: -432, y: 274}
+        - {x: -427, y: 274}
+        - {x: -423, y: 278}
+        - {x: -423, y: 281}
+        - {x: -425, y: 283}
+      - - {x: -433, y: 291}
+        - {x: -435, y: 286}
+        - {x: -433, y: 284}
+        - {x: -430, y: 285}
+        - {x: -427, y: 290}
+        - {x: -427, y: 292}
+        - {x: -430, y: 293}
+    - name: shobel_shobel_1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -98, y: 222}
+        - {x: -206, y: 265}
+        - {x: -249, y: 265}
+        - {x: -264, y: 217}
+        - {x: -249, y: 204}
+        - {x: -195, y: 201}
+        - {x: -139, y: 188}
+        - {x: -183, y: 197}
+        - {x: -198, y: 196}
+        - {x: -206, y: 189}
+        - {x: -266, y: 117}
+        - {x: -309, y: 45}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -266, y: 34}
+        - {x: -130, y: 11}
+        - {x: -9, y: 11}
+        - {x: -5, y: 20}
+        - {x: -5, y: 46}
+        - {x: -57, y: 149}
+      - - {x: -14, y: 300}
+        - {x: -17, y: 297}
+        - {x: -18, y: 293}
+        - {x: -16, y: 291}
+        - {x: -15, y: 291}
+        - {x: -11, y: 294}
+        - {x: -9, y: 299}
+        - {x: -10, y: 300}
+    - name: shobel_shobel_1_13
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -204, y: 260}
+        - {x: -255, y: 260}
+        - {x: -295, y: 158}
+        - {x: -309, y: 69}
+        - {x: -309, y: 11}
+        - {x: -286, y: 11}
+        - {x: -266, y: 34}
+        - {x: -185, y: 150}
+        - {x: -118, y: 11}
+        - {x: -8, y: 11}
+        - {x: -5, y: 15}
+        - {x: -5, y: 63}
+        - {x: -101, y: 236}
+    - name: shobel_shobel_1_14
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -450, y: 8}
+        - {x: -447, y: 9}
+        - {x: -447, y: 12}
+        - {x: -449, y: 14}
+        - {x: -450, y: 14}
+      - - {x: -260, y: 253}
+        - {x: -277, y: 230}
+        - {x: -271, y: 212}
+        - {x: -260, y: 194}
+        - {x: -254, y: 194}
+        - {x: -309, y: 49}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -266, y: 34}
+        - {x: -130, y: 11}
+        - {x: -5, y: 11}
+        - {x: -5, y: 120}
+        - {x: -136, y: 253}
+      - - {x: -432, y: 289}
+        - {x: -436, y: 285}
+        - {x: -437, y: 280}
+        - {x: -435, y: 278}
+        - {x: -433, y: 278}
+        - {x: -429, y: 283}
+        - {x: -429, y: 288}
+      - - {x: -14, y: 300}
+        - {x: -15, y: 297}
+        - {x: -15, y: 291}
+        - {x: -10, y: 291}
+        - {x: -6, y: 296}
+        - {x: -5, y: 300}
+    - name: shobel_shobel_1_15
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 450
+        height: 300
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -124, y: 218}
+        - {x: -219, y: 247}
+        - {x: -267, y: 247}
+        - {x: -285, y: 222}
+        - {x: -271, y: 190}
+        - {x: -258, y: 184}
+        - {x: -309, y: 49}
+        - {x: -309, y: 28}
+        - {x: -305, y: 17}
+        - {x: -210, y: 11}
+        - {x: -5, y: 11}
+        - {x: -5, y: 54}
+        - {x: -72, y: 162}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
