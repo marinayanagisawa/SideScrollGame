@@ -28,7 +28,7 @@ public class WalkingEnemy : Enemy {
 			
 	}
 		
-	//ヒット時のダメージ計算とスコア計算
+	//プレイヤーの弾とヒット時のダメージ計算とスコア計算
 	//（親クラスからではGameControllerなどのオブジェクト取得ができない様なので,それぞれの子クラスに持たせる）
 	public void FromOnTriggerEnter2D(Collider2D col){
 

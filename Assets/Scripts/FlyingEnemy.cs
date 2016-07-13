@@ -19,7 +19,7 @@ public class FlyingEnemy : Enemy {
 	}
 
 
-	//ヒット時のダメージ計算とスコア計算
+	//プレイヤーの弾とヒット時のダメージ計算とスコア計算
 	public void FromOnTriggerEnter2D(Collider2D col){
 
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);

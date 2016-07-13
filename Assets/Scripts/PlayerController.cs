@@ -151,7 +151,9 @@ public class PlayerController : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
-			
+
+			Debug.Log ("Hit to player!");
+
 			//敵を削除
 			Destroy (col.gameObject);
 			gc.SendMessage ("EnemyExplode");
