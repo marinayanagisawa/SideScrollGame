@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 472700}
   - 50: {fileID: 5075040}
+  - 114: {fileID: 11432972}
   m_Layer: 10
   m_Name: Boss
   m_TagString: Untagged
@@ -25,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443932}
   - 60: {fileID: 6054228}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,8 +59,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 439692}
-  - 60: {fileID: 6040774}
-  m_Layer: 13
+  - 60: {fileID: 6053562}
+  m_Layer: 10
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.35, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439692}
@@ -111,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.52, y: 0, z: 0}
+  m_LocalPosition: {x: 8.13, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 407300}
@@ -134,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &6040774
+--- !u!60 &6053562
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -148,11 +149,11 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.4828477, y: 1.1275449}
-      - {x: 1.1059322, y: 0.70076156}
-      - {x: -0.37791157, y: -0.70880306}
-      - {x: -0.52401304, y: -0.57214814}
-      - {x: -0.1675682, y: 0.099479556}
+    - - {x: 0.45800543, y: 1.165391}
+      - {x: 1.052836, y: 0.66524386}
+      - {x: 0.21883631, y: -0.3637333}
+      - {x: -0.43511677, y: -0.61818105}
+      - {x: -0.3531041, y: 0.016402125}
 --- !u!60 &6054228
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -203,6 +204,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11432972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b48bb84e43fad748936005284bc884a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHp: 80
+  score: 0
+  distance: 0
+  arm: {fileID: 0}
+  robo: {fileID: 0}
 --- !u!212 &21206490
 SpriteRenderer:
   m_ObjectHideFlags: 1
