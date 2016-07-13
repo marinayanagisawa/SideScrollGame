@@ -40,14 +40,15 @@ public class PlayerShot : MonoBehaviour {
 		//敵と弾が当たった時の音とエフェクトの処理
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "Enemy" || layerName == "FlyingEnemy") {
+		if (layerName == "Enemy" || layerName == "FlyingEnemy"|| layerName == "BossShot") {
 			
-			Debug.Log ("Hit to Enemy!");
+			Debug.Log ("Hit to" + layerName);
 			//音を再生する
 			gc.SendMessage ("EnemyExplode");
 
 			//エフェクトを生成
 			Instantiate (smoke, transform.position, smoke.transform.rotation);
+			//プレイヤーの弾の削除
 			Destroy (this.gameObject);
 
 		}

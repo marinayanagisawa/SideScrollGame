@@ -169,12 +169,12 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	//ステージギミックと当たった場合
+	//bossのショットか,ステージギミックと当たった場合
 	void OnTriggerEnter2D(Collider2D col){
 
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "Gimmick") {
+		if (layerName == "Gimmick"|| layerName == "BossShot") {
 
 			if (!hitting) {
 				Damage ();

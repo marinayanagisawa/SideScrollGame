@@ -209,7 +209,7 @@ public class GameController : MonoBehaviour {
 		SceneManager.LoadScene ("title");
 	}
 
-	//敵の爆発音
+	//敵の爆発音(PlayerShotクラスから使う)
 	public void EnemyExplode(){
 		sound[1].PlayOneShot (sound[1].clip);
 	}

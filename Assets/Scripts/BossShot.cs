@@ -22,21 +22,19 @@ public class BossShot : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 
-		//敵と弾が当たった時の音とエフェクトの処理
+		//プレイヤーと弾が当たった時の音とエフェクトの処理
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
+		//bossの弾とプレイヤーが接触
 		if (layerName == "Chara") {
-
-			//Debug.Log ("Hit to player!");
-			//音を再生する
 			gc.SendMessage ("EnemyExplode");
-
 			Destroy (this.gameObject);
 
+		//bossの弾とプレイヤーの弾同士が接触した場合,音の処理がPlayer.cs側にある
+		} else if (layerName == "shot") {
+			Destroy (this.gameObject);
 		}
 
+
 	}
-
-
-
 }
