@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5076914}
   - 114: {fileID: 11453660}
   - 58: {fileID: 5825210}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: bossShot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460968}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: bossShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - 50: {fileID: 5045070}
   - 114: {fileID: 11423988}
   - 58: {fileID: 5808504}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: bossShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   - 50: {fileID: 5046382}
   - 114: {fileID: 11451524}
   - 58: {fileID: 5845926}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: bossShot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1, y: 0, z: 0}
+  m_LocalPosition: {x: 6.45, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430266}
@@ -187,7 +187,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.16049623
+  m_Radius: 0.22614491
 --- !u!58 &5825210
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48006c687466cf4e90b0dbc596e1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 6
-  shotLifeTime: 1.5
+  shotSpeed: 5
+  shotLifeTime: 3
 --- !u!114 &11451524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48006c687466cf4e90b0dbc596e1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 6
-  shotLifeTime: 1.5
+  shotSpeed: 5
+  shotLifeTime: 3
 --- !u!114 &11453660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48006c687466cf4e90b0dbc596e1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 6
-  shotLifeTime: 1.5
+  shotSpeed: 5
+  shotLifeTime: 3
 --- !u!212 &21250728
 SpriteRenderer:
   m_ObjectHideFlags: 1

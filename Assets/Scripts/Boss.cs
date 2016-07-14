@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour {
 
 	//弾を発射させるオブジェクトをインスペクターから指定しておく
 	public GameObject arm;
+	public GameObject shot;
 	//プレイヤーとの距離を測る時に使用
 	//public GameObject robo;
 
@@ -32,7 +33,8 @@ public class Boss : MonoBehaviour {
 
 
 	void BossShot(){
-		//ToDo--------------------------弾を撃つ
+		//弾を撃つ
+		Instantiate (shot, arm.transform.position, transform.rotation);
 	}
 
 
