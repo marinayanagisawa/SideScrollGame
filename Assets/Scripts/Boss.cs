@@ -77,7 +77,7 @@ public class Boss : MonoBehaviour {
 		
 		//Todo------------------------撃破処理
 		anim.SetTrigger("clean");
-		//子要素（BossSprite）のBoxColliderを無効にする
+		//子要素（BossSprite）のBoxCollider,hand,shovelのColliderを無効にする
 		//撃破後のパーティクル呼び出し
 		//落下後に削除
 		//Destroy (this.gameObject);

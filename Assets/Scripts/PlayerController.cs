@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour {
 
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "Gimmick"|| layerName == "BossShot") {
+		if (layerName == "Gimmick"|| layerName == "BossShot"|| layerName == "Boss") {
 
 			if (!hitting) {
 				Damage ();
