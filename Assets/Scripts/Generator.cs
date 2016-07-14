@@ -14,13 +14,11 @@ public class Generator : MonoBehaviour {
 	public float nextGenerateTime = 3.0f;
 	private bool canGenerate = true;
 	public float GenerateLimit = 3.0f;
-	//private PlayerController pc;
 	private GameController gc;
 
 	void Start () {
 
 		robo = GameObject.Find ("robo");
-		//pc = robo.GetComponent<PlayerController> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 
 	}

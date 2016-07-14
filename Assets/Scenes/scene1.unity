@@ -3771,6 +3771,18 @@ Prefab:
       propertyPath: shot
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: moveDis
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: shovelMaxDis
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: shovelMinDis
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
   m_IsPrefabParent: 0
@@ -6704,7 +6716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1816649531
 RectTransform:
   m_ObjectHideFlags: 0

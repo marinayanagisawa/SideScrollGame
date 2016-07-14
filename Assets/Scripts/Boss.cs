@@ -12,10 +12,17 @@ public class Boss : MonoBehaviour {
 	private GameController gc;
 
 	//プレイヤーとの距離を測る時に使用
-	//public GameObject robo;
+	public GameObject robo;
+	public float shovelMaxDis = 11.0f;
+	public float shovelMinDis = 10.0f;
+	public float dis;
+	public float handMaxDis = 9.0f;
+	public float handMinDis = 8.0f;
+
 
 
 	void Start () {
+		robo = GameObject.Find ("robo");
 		anim = gameObject.transform.FindChild ("BossSprite").GetComponent<Animator> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 		pc = GameObject.Find("robo").GetComponent<PlayerController>();
@@ -23,8 +30,20 @@ public class Boss : MonoBehaviour {
 	
 
 	void Update () {
-		//ToDo--------------------------プレイヤーとの距離を監視
-		//ショベル,アームを動かす
+		//プレイヤーとの距離を監視
+		Vector2 bossPos = this.transform.position;
+		Vector2 roboPos = robo.transform.position;
+		dis = Vector2.Distance (bossPos, roboPos);
+
+		if (dis < shovelMaxDis && dis > shovelMinDis) {
+			Debug.Log ("shovel Start");
+			anim.SetTrigger ("shovel");
+		}
+
+		if (dis < handMaxDis && dis > handMinDis) {
+			Debug.Log ("hand Start");
+			anim.SetTrigger ("hand");
+		}
 	}
 		
 
