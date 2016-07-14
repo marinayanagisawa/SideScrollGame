@@ -65,7 +65,7 @@ public class Boss : MonoBehaviour {
 				gc.playScore += count;
 
 				//撃破処理
-				//Defeat();
+				Defeat();
 			}
 
 		}
@@ -76,8 +76,9 @@ public class Boss : MonoBehaviour {
 	void Defeat(){
 		
 		//Todo------------------------撃破処理
+		anim.SetTrigger("clean");
+		//子要素（BossSprite）のBoxColliderを無効にする
 		//撃破後のパーティクル呼び出し
-		//アニメーション再生
 		//落下後に削除
 		//Destroy (this.gameObject);
 		//ステージ出口の壁を削除
