@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour {
 	private Animator anim;
 	private PlayerController pc;
 	private GameController gc;
+	public GameObject smokeG;
 
 	//プレイヤーとの距離を測る時に使用
 	public GameObject robo;
@@ -76,9 +77,10 @@ public class Boss : MonoBehaviour {
 	void Defeat(){
 		
 		//Todo------------------------撃破処理
+		//撃破後のパーティクル呼び出し
+		Instantiate (smokeG, transform.position, smokeG.transform.rotation);
 		anim.SetTrigger("clean");
 		//子要素（BossSprite）のBoxCollider,hand,shovelのColliderを無効にする
-		//撃破後のパーティクル呼び出し
 		//落下後に削除
 		//Destroy (this.gameObject);
 		//ステージ出口の壁を削除

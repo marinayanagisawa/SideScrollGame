@@ -3763,6 +3763,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: smokeG
+      value: 
+      objectReference: {fileID: 116924, guid: aa5b9b39256e95943b167d48a7eca2c2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
   m_IsPrefabParent: 0
@@ -6696,7 +6700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1816649531
 RectTransform:
   m_ObjectHideFlags: 0
