@@ -11,9 +11,6 @@ public class Boss : MonoBehaviour {
 	private PlayerController pc;
 	private GameController gc;
 
-	//弾を発射させるオブジェクトをインスペクターから指定しておく
-	public GameObject arm;
-	public GameObject shot;
 	//プレイヤーとの距離を測る時に使用
 	//public GameObject robo;
 
@@ -27,16 +24,9 @@ public class Boss : MonoBehaviour {
 
 	void Update () {
 		//ToDo--------------------------プレイヤーとの距離を監視
-		//BossShot();
+		//ショベル,アームを動かす
 	}
-
-
-
-	void BossShot(){
-		//弾を撃つ
-		Instantiate (shot, arm.transform.position, transform.rotation);
-	}
-
+		
 
 	//アームは弾をすり抜けるようにし,本体に当たった場合に以下の処理
 	//ヒット時のダメージ計算とスコア計算
