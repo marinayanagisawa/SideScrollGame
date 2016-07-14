@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 472700}
   - 50: {fileID: 5075040}
   - 114: {fileID: 11432972}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443932}
   - 60: {fileID: 6054228}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,9 @@ GameObject:
   - 212: {fileID: 21206490}
   - 95: {fileID: 9576920}
   - 61: {fileID: 6184692}
-  m_Layer: 10
+  - 114: {fileID: 11487238}
+  - 114: {fileID: 11443482}
+  m_Layer: 17
   m_Name: BossSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +62,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 439692}
   - 60: {fileID: 6053562}
-  m_Layer: 10
+  m_Layer: 17
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,8 +220,37 @@ MonoBehaviour:
   bossHp: 80
   score: 0
   distance: 0
-  arm: {fileID: 0}
   robo: {fileID: 0}
+  shovelMaxDis: 13
+  shovelMinDis: 12
+  dis: 0
+  handMaxDis: 9
+  handMinDis: 8
+--- !u!114 &11443482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50e581e725877a42b15bb1f62f14204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+--- !u!114 &11487238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b367194bee5a543a4a9cac55828fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arm: {fileID: 147418}
+  shot: {fileID: 135002, guid: 702445b419d9ea14ab620d9e34fa8822, type: 2}
 --- !u!212 &21206490
 SpriteRenderer:
   m_ObjectHideFlags: 1
