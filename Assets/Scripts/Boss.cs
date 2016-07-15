@@ -20,13 +20,14 @@ public class Boss : MonoBehaviour {
 	public float handMaxDis = 9.0f;
 	public float handMinDis = 8.0f;
 
-
+	public AudioSource sound;
 
 	void Start () {
 		robo = GameObject.Find ("robo");
 		anim = gameObject.transform.FindChild ("BossSprite").GetComponent<Animator> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 		pc = GameObject.Find("robo").GetComponent<PlayerController>();
+		sound = GetComponent<AudioSource> ();
 	}
 	
 
@@ -77,6 +78,7 @@ public class Boss : MonoBehaviour {
 	void Defeat(){
 		
 		//Todo------------------------撃破処理
+		sound.PlayOneShot (sound.clip);
 		//撃破後のパーティクル呼び出し
 		Instantiate (smokeG, transform.position, smokeG.transform.rotation);
 		anim.SetTrigger("clean");
