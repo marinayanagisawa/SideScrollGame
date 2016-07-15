@@ -3749,7 +3749,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472700, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
       propertyPath: m_IsTrigger
@@ -3767,6 +3767,10 @@ Prefab:
       propertyPath: smokeG
       value: 
       objectReference: {fileID: 116924, guid: aa5b9b39256e95943b167d48a7eca2c2, type: 2}
+    - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
   m_IsPrefabParent: 0

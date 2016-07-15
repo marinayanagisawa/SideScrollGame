@@ -78,6 +78,7 @@ public class Boss : MonoBehaviour {
 	void Defeat(){
 		
 		//Todo------------------------撃破処理
+		//サウンドを鳴らす
 		sound.PlayOneShot (sound.clip);
 		//撃破後のパーティクル呼び出し
 		Instantiate (smokeG, transform.position, smokeG.transform.rotation);
