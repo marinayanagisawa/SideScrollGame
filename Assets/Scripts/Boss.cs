@@ -75,18 +75,22 @@ public class Boss : MonoBehaviour {
 	}
 
 
+	//撃破後処理
 	void Defeat(){
 		
-		//Todo------------------------撃破処理
 		//サウンドを鳴らす
 		sound.PlayOneShot (sound.clip);
+
 		//撃破後のパーティクル呼び出し
 		Instantiate (smokeG, transform.position, smokeG.transform.rotation);
+
+		//アニメーションの再生とコライダーをOFF（アニメーション内にて）
 		anim.SetTrigger("clean");
-		//子要素（BossSprite）のBoxCollider,hand,shovelのColliderを無効にする
+
 		//落下後に削除
-		//Destroy (this.gameObject);
-		//ステージ出口の壁を削除
+		Destroy (this.gameObject,3.0f);
+
+		//Todo------------------------ステージ出口の壁を削除
 	}
 
 
