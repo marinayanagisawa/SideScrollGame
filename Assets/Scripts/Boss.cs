@@ -12,6 +12,8 @@ public class Boss : MonoBehaviour {
 	private GameController gc;
 	public GameObject smokeG;
 
+	private bool defeat = false;
+
 	//プレイヤーとの距離を測る時に使用
 	public GameObject robo;
 	public float shovelMaxDis = 11.0f;
@@ -32,19 +34,24 @@ public class Boss : MonoBehaviour {
 	
 
 	void Update () {
-		//プレイヤーとの距離を監視
-		Vector2 bossPos = this.transform.position;
-		Vector2 roboPos = robo.transform.position;
-		dis = Vector2.Distance (bossPos, roboPos);
 
-		if (dis < shovelMaxDis && dis > shovelMinDis) {
-			Debug.Log ("shovel Start");
-			anim.SetTrigger ("shovel");
-		}
+		if (defeat == false) {
 
-		if (dis < handMaxDis && dis > handMinDis) {
-			Debug.Log ("hand Start");
-			anim.SetTrigger ("hand");
+			//プレイヤーとの距離を監視
+			Vector2 bossPos = this.transform.position;
+			Vector2 roboPos = robo.transform.position;
+			dis = Vector2.Distance (bossPos, roboPos);
+
+
+			if (dis < shovelMaxDis && dis > shovelMinDis) {
+				Debug.Log ("shovel Start");
+				anim.SetTrigger ("shovel");
+			}
+
+			if (dis < handMaxDis && dis > handMinDis) {
+				Debug.Log ("hand Start");
+				anim.SetTrigger ("hand");
+			}
 		}
 	}
 		
@@ -53,30 +60,33 @@ public class Boss : MonoBehaviour {
 	//ヒット時のダメージ計算とスコア計算
 	public void FromOnTriggerEnter2D(Collider2D col){
 
-		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-		if (layerName == "shot") {
-			//ダメージ計算
-			bossHp = bossHp - pc.shotPower; 
+		if (defeat == false) {
 
-			//倒した場合の処理
-			if (bossHp <= 0){
-				int count = score;
-				Debug.Log (count);
-				//スコアをGameControllerのスコア合計に追加
-				gc.playScore += count;
+			string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
-				//撃破処理
-				Defeat();
+			if (layerName == "shot") {
+				//ダメージ計算
+				bossHp = bossHp - pc.shotPower; 
+
+				//倒した場合の処理
+				if (bossHp <= 0) {
+					int count = score;
+					Debug.Log (count);
+					//スコアをGameControllerのスコア合計に追加
+					gc.playScore += count;
+
+					//撃破処理
+					Defeat ();
+				}
 			}
-
 		}
-
 	}
 
 
 	//撃破後処理
 	void Defeat(){
+		defeat = true;
 		
 		//サウンドを鳴らす
 		sound.PlayOneShot (sound.clip);
