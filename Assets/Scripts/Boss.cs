@@ -42,16 +42,15 @@ public class Boss : MonoBehaviour {
 			Vector2 roboPos = robo.transform.position;
 			dis = Vector2.Distance (bossPos, roboPos);
 
-
 			if (dis < shovelMaxDis && dis > shovelMinDis) {
 				Debug.Log ("shovel Start");
 				anim.SetTrigger ("shovel");
 			}
-
 			if (dis < handMaxDis && dis > handMinDis) {
 				Debug.Log ("hand Start");
 				anim.SetTrigger ("hand");
 			}
+
 		}
 	}
 		

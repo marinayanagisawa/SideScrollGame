@@ -3785,7 +3785,59 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
       propertyPath: shovelMaxDis
-      value: 14
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: 0.7718587
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 0.7629757
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -0.2209549
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -0.26600194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -0.5328479
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053562, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -0.63039744
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054228, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -0.21673965
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054228, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -0.40129286
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054228, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: 0.29281986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054228, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: -0.4784832
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: shovelMinDis
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: handMinDis
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432972, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
+      propertyPath: handMaxDis
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
