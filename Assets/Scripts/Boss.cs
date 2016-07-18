@@ -99,7 +99,10 @@ public class Boss : MonoBehaviour {
 		//落下後に削除
 		Destroy (this.gameObject,3.0f);
 
-		//Todo------------------------ステージ出口の壁を削除
+		//ステージ出口の壁を削除
+		GameObject gate = GameObject.Find("Gate");
+		gate.GetComponent<BoxCollider2D> ().enabled = false;
+
 	}
 
 
