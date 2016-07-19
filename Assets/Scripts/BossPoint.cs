@@ -33,37 +33,48 @@ public class BossPoint : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		//ボス出現演出呼び出し
 		StartCoroutine("BossComeUp");
-		//BossPointの削除
-		//Destroy(this.gameObject);
 
 	}
 
 
 	IEnumerator BossComeUp(){
-		//Todo----------------------ボス出現演出
-		//BGMをストップ（GameController）
-		//プレイヤーのCanMoveをオフ
+		//ToDo----------------BGMをストップ（GameController）
+
+		//プレイヤーの入力受付を中止
 		pc.canMove = false;
 		yield return new WaitForSeconds (1.0f);
-		//プレイヤーの背後に壁を作成
+
+		//ToDo--------------------Boss出現警告をUIで表示
+
+		//ToDo--------------------プレイヤーの背後に壁を作成
+
 		//カメラチェンジ呼び出し（メインからサブへ）
 		ChangeCamera();
 		yield return new WaitForSeconds (1.0f);
-		//BossのGravityScaleを３に変更
+
+		//Bossの登場演出
 		boss.GetComponent<Rigidbody2D> ().gravityScale = 3;
 		yield return new WaitForSeconds (0.8f);
+
 		//Bossの着地後に画面揺れ
 		shaker.GetComponent<Shaker> ().shakeOnL = true;
 		yield return new WaitForSeconds (0.3f);
+
+		//コーンの落下演出
 		corn.GetComponent<BoxCollider2D> ().enabled = false;
 		yield return new WaitForSeconds (2.0f);
+
 		//カメラチェンジ呼び出し（サブからメインへ）
 		ChangeCamera ();
 		yield return new WaitForSeconds (1.0f);
-		//プレイヤーのCanMoveをオン
+
+		//プレイヤーの入力受付を再開
 		pc.canMove = true;
 		yield return new WaitForSeconds (1.0f);
-		//bossBGMの再生（GameControllerに追加）
+
+		//ToDo--------------bossBGMの再生（GameControllerに追加）
+
+		//出現ポイント,演出用オブジェクトの削除
 		Destroy(corn);
 		Destroy(this.gameObject);
 
