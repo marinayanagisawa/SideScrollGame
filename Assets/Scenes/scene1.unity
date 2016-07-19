@@ -4725,7 +4725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09350ebcdf1120f41a77d78c304d4aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraObj: {fileID: 1142430372}
+  cameraObj: {fileID: 1651823564}
   shakeOn: 0
   shakeOnM: 0
   shakeOnL: 0

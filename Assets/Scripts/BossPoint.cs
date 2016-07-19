@@ -5,10 +5,11 @@ public class BossPoint : MonoBehaviour {
 
 	private GameObject mainCamera;
 	private GameObject subCamera;
-	private PlayerController pc;
+	private GameObject shaker;
+
 	private GameObject robo;
 	private GameObject boss;
-
+	private PlayerController pc;
 
 	void Start () {
 
@@ -23,7 +24,7 @@ public class BossPoint : MonoBehaviour {
 		subCamera = GameObject.Find ("SubCamera");
 		subCamera.SetActive(false);
 
-	
+		shaker = GameObject.Find ("Shaker");
 	}
 
 
@@ -49,8 +50,11 @@ public class BossPoint : MonoBehaviour {
 		yield return new WaitForSeconds (1.0f);
 		//BossのGravityScaleを３に変更
 		boss.GetComponent<Rigidbody2D> ().gravityScale = 3;
+		yield return new WaitForSeconds (0.8f);
 		//Bossの着地後に画面揺れ
+		shaker.GetComponent<Shaker> ().shakeOnL = true;
 		//カメラチェンジ呼び出し（サブからメインへ）
+		yield return new WaitForSeconds (2.0f);
 		ChangeCamera ();
 		yield return new WaitForSeconds (1.0f);
 		//プレイヤーのCanMoveをオン
