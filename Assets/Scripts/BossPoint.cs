@@ -6,6 +6,7 @@ public class BossPoint : MonoBehaviour {
 	private GameObject mainCamera;
 	private GameObject subCamera;
 	private GameObject shaker;
+	public GameObject corn;
 
 	private GameObject robo;
 	private GameObject boss;
@@ -53,14 +54,17 @@ public class BossPoint : MonoBehaviour {
 		yield return new WaitForSeconds (0.8f);
 		//Bossの着地後に画面揺れ
 		shaker.GetComponent<Shaker> ().shakeOnL = true;
-		//カメラチェンジ呼び出し（サブからメインへ）
+		yield return new WaitForSeconds (0.3f);
+		corn.GetComponent<BoxCollider2D> ().enabled = false;
 		yield return new WaitForSeconds (2.0f);
+		//カメラチェンジ呼び出し（サブからメインへ）
 		ChangeCamera ();
 		yield return new WaitForSeconds (1.0f);
 		//プレイヤーのCanMoveをオン
 		pc.canMove = true;
 		yield return new WaitForSeconds (1.0f);
 		//bossBGMの再生（GameControllerに追加）
+		Destroy(corn);
 		Destroy(this.gameObject);
 
 	}
