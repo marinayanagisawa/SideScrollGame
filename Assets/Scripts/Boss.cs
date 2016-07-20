@@ -76,7 +76,7 @@ public class Boss : MonoBehaviour {
 					gc.playScore += count;
 
 					//撃破処理
-					Defeat ();
+					StartCoroutine("Defeat");
 				}
 			}
 		}
@@ -84,14 +84,20 @@ public class Boss : MonoBehaviour {
 
 
 	//撃破後処理
-	void Defeat(){
+	IEnumerator Defeat(){
 		defeat = true;
 		
-		//サウンドを鳴らす
+		//爆破サウンド
 		sound.PlayOneShot (sound.clip);
 
 		//撃破後のパーティクル呼び出し
 		Instantiate (smokeG, transform.position, smokeG.transform.rotation);
+
+		//ステージ出口の壁を削除
+		GameObject gate = GameObject.Find("Gate");
+		gate.GetComponent<BoxCollider2D> ().enabled = false;
+
+		yield return new WaitForSeconds (0.9f);
 
 		//アニメーションの再生とコライダーをOFF（アニメーション内にて）
 		anim.SetTrigger("clean");
@@ -101,9 +107,7 @@ public class Boss : MonoBehaviour {
 
 		//ToDo-------------------------プレイヤーの背後の壁を削除（落下など）
 
-		//ステージ出口の壁を削除
-		GameObject gate = GameObject.Find("Gate");
-		gate.GetComponent<BoxCollider2D> ().enabled = false;
+
 
 	}
 
