@@ -46,11 +46,11 @@ public class BossPoint : MonoBehaviour {
 
 		//プレイヤーの入力受付を中止
 		pc.canMove = false;
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (0.2f);
 
 		//Boss出現警告をUIで表示
 		anim.SetTrigger("warnning");
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (2.5f);
 
 		//ToDo--------------------プレイヤーの背後に壁を作成
 
