@@ -50,7 +50,6 @@ public class Boss : MonoBehaviour {
 				Debug.Log ("hand Start");
 				anim.SetTrigger ("hand");
 			}
-
 		}
 	}
 		
@@ -58,7 +57,6 @@ public class Boss : MonoBehaviour {
 	//アームは弾をすり抜けるようにし,本体に当たった場合に以下の処理
 	//ヒット時のダメージ計算とスコア計算
 	public void FromOnTriggerEnter2D(Collider2D col){
-
 
 		if (defeat == false) {
 
@@ -107,9 +105,6 @@ public class Boss : MonoBehaviour {
 
 		//ToDo-------------------------プレイヤーの背後の壁を削除（落下など）
 
-
-
 	}
-
 
 }

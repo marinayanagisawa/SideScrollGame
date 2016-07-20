@@ -41,13 +41,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 
-		//コンポーネントを取得
 		sr = GetComponent<SpriteRenderer>();
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 
-		//サウンド取得
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
 		sound[0] = audiosources [0];
 

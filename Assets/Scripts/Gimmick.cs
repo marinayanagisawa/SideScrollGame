@@ -7,14 +7,10 @@ public class Gimmick : MonoBehaviour {
 	public GameObject gimmickObj;
 	public Animator animator;
 
-	//サウンド
 	private AudioSource sound;
-
-	//public GameObject shaker;
 
 	void Start () {
 
-		//shaker = GameObject.Find ("Shaker");
 		animator = gimmickObj.GetComponent<Animator>();
 		sound = GetComponent<AudioSource> ();
 
@@ -27,9 +23,6 @@ public class Gimmick : MonoBehaviour {
 		if (layerName == "Chara") {
 			animator.SetTrigger("switch");
 			sound.PlayOneShot (sound.clip, 1.0f);
-
-			//カメラが揺れる仕様にすると,プレイヤーとの位置関係がおかしくなるため一時保留
-			//shaker.GetComponent<Shaker> ().shakeOn = true;
 
 			Destroy (gimmickObj, 2.0f);
 			Destroy (this);

@@ -31,13 +31,11 @@ public class BossPoint : MonoBehaviour {
 
 		anim = GameObject.Find ("warnning").GetComponent<Animator> ();
 	}
-
-
+		
 
 	void OnTriggerEnter2D(Collider2D col){
 		//ボス出現演出呼び出し
 		StartCoroutine("BossComeUp");
-
 	}
 
 
@@ -97,7 +95,5 @@ public class BossPoint : MonoBehaviour {
 			subCamera.SetActive (false);
 		}
 	}
-
-
 
 }

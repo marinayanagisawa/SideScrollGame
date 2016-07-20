@@ -52,14 +52,11 @@ public class GameController : MonoBehaviour {
 
 		gameOver = false;
 
-		//プレイヤーの状態を取得
 		robo = GameObject.Find ("robo");
 		pc = robo.GetComponent<PlayerController> ();
 
-		//ゲームオーバー表示のためのテキストを取得
 		gameOverText = GameObject.Find ("GameOverText").GetComponent<Text> ();
 
-		//スコア表示のためのテキストを取得
 		scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
 		highScoreText = GameObject.Find ("HighScoreText").GetComponent<Text> ();
 
