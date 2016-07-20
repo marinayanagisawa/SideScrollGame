@@ -12,6 +12,8 @@ public class BossPoint : MonoBehaviour {
 	private GameObject boss;
 	private PlayerController pc;
 
+	private Animator anim;
+
 	void Start () {
 
 		robo = GameObject.Find ("robo");
@@ -26,6 +28,8 @@ public class BossPoint : MonoBehaviour {
 		subCamera.SetActive(false);
 
 		shaker = GameObject.Find ("Shaker");
+
+		anim = GameObject.Find ("warnning").GetComponent<Animator> ();
 	}
 
 
@@ -44,7 +48,9 @@ public class BossPoint : MonoBehaviour {
 		pc.canMove = false;
 		yield return new WaitForSeconds (1.0f);
 
-		//ToDo--------------------Boss出現警告をUIで表示
+		//Boss出現警告をUIで表示
+		anim.SetTrigger("warnning");
+		yield return new WaitForSeconds (1.0f);
 
 		//ToDo--------------------プレイヤーの背後に壁を作成
 
