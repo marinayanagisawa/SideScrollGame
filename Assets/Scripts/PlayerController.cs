@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour {
 			//ダメージアニメーション中でなければ普通にダメージ処理
 			if (!hitting) {
 				Damage ();
-				//ライフが０なら死亡処理
+	
 				if (life < 0) {
 					Dead ();
 				}

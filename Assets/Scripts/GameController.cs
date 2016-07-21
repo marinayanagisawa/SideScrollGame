@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour {
 	//スコア表示用
 	private Text scoreText;
 	private Text highScoreText;
-	//public GameObject newScore;
 
 	//playerPrefsのキー
 	public static string highScoreKey = "HighScore";

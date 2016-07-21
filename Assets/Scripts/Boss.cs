@@ -12,6 +12,8 @@ public class Boss : MonoBehaviour {
 	private GameController gc;
 	public GameObject smokeG;
 
+	private GameObject wall;
+
 	private bool defeat = false;
 
 	//プレイヤーとの距離を測る時に使用
@@ -29,6 +31,7 @@ public class Boss : MonoBehaviour {
 		anim = gameObject.transform.FindChild ("BossSprite").GetComponent<Animator> ();
 		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
 		pc = GameObject.Find("robo").GetComponent<PlayerController>();
+		wall = GameObject.Find ("BossWall");
 		sound = GetComponent<AudioSource> ();
 	}
 	
@@ -94,16 +97,18 @@ public class Boss : MonoBehaviour {
 		//ステージ出口の壁を削除
 		GameObject gate = GameObject.Find("Gate");
 		gate.GetComponent<BoxCollider2D> ().enabled = false;
-
 		yield return new WaitForSeconds (0.9f);
 
 		//アニメーションの再生とコライダーをOFF（アニメーション内にて）
 		anim.SetTrigger("clean");
 
-		//落下後に削除
-		Destroy (this.gameObject,3.0f);
+		//プレイヤーの背後の壁を落下後に削除
+		wall.GetComponent<BoxCollider2D>().enabled = false;
+		yield return new WaitForSeconds (1.0f);
+		Destroy (wall);
 
-		//ToDo-------------------------プレイヤーの背後の壁を削除（落下など）
+		//ボスを削除(ボスの落下は,アニメーション上でコライダーを消している)
+		Destroy (this.gameObject,3.0f);
 
 	}
 
