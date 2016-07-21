@@ -6369,7 +6369,7 @@ GameObject:
   - 4: {fileID: 1643909993}
   - 61: {fileID: 1643909992}
   - 114: {fileID: 1643909994}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BossPoint
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
