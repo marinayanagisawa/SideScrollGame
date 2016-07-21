@@ -10,6 +10,7 @@ public class BossPoint : MonoBehaviour {
 
 	private GameObject robo;
 	private GameObject boss;
+	private GameObject wall;
 	private PlayerController pc;
 
 	private Animator anim;
@@ -19,6 +20,7 @@ public class BossPoint : MonoBehaviour {
 		robo = GameObject.Find ("robo");
 		boss = GameObject.Find ("Boss");
 		boss.GetComponent<Rigidbody2D> ().gravityScale = 0;
+		wall = GameObject.Find("BossWall");
 
 		pc = robo.GetComponent<PlayerController> ();
 		
@@ -50,9 +52,11 @@ public class BossPoint : MonoBehaviour {
 		anim.SetTrigger("warnning");
 		yield return new WaitForSeconds (2.5f);
 
-		//ToDo--------------------プレイヤーの背後に壁を作成
+		//プレイヤーの背後に壁が出現
+		wall.GetComponent<Rigidbody2D>().gravityScale = 3;
+		yield return new WaitForSeconds (1.5f);
 
-		//カメラチェンジ呼び出し（メインからサブへ）
+		//カメラチェンジ（メインからサブ）
 		ChangeCamera();
 		yield return new WaitForSeconds (1.0f);
 
@@ -68,7 +72,7 @@ public class BossPoint : MonoBehaviour {
 		corn.GetComponent<BoxCollider2D> ().enabled = false;
 		yield return new WaitForSeconds (2.0f);
 
-		//カメラチェンジ呼び出し（サブからメインへ）
+		//カメラチェンジ（サブからメイン）
 		ChangeCamera ();
 		yield return new WaitForSeconds (1.0f);
 

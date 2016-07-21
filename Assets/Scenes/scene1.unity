@@ -2271,6 +2271,10 @@ Prefab:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6183722, guid: 255176a7d15d10c499def4c80f67c8c8, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 255176a7d15d10c499def4c80f67c8c8, type: 2}
   m_IsPrefabParent: 0
@@ -2341,7 +2345,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 439282, guid: 2ac4cb777a368c04b95d6aba497dbde3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 128.6
+      value: 121.8
       objectReference: {fileID: 0}
     - target: {fileID: 439282, guid: 2ac4cb777a368c04b95d6aba497dbde3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4550,7 +4554,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 439282, guid: 2ac4cb777a368c04b95d6aba497dbde3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 127.4
+      value: 120.6
       objectReference: {fileID: 0}
     - target: {fileID: 439282, guid: 2ac4cb777a368c04b95d6aba497dbde3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7118,7 +7122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1816649531
 RectTransform:
   m_ObjectHideFlags: 0
