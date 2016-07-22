@@ -15,6 +15,8 @@ public class BossPoint : MonoBehaviour {
 
 	private Animator anim;
 
+	AudioSource sound;
+
 	void Start () {
 
 		robo = GameObject.Find ("robo");
@@ -32,6 +34,8 @@ public class BossPoint : MonoBehaviour {
 		shaker = GameObject.Find ("Shaker");
 
 		anim = GameObject.Find ("warnning").GetComponent<Animator> ();
+
+		sound = GetComponent<AudioSource> ();
 	}
 		
 
@@ -50,7 +54,11 @@ public class BossPoint : MonoBehaviour {
 
 		//Boss出現警告をUIで表示
 		anim.SetTrigger("warnning");
-		yield return new WaitForSeconds (2.5f);
+		yield return new WaitForSeconds (0.5f);
+
+		//警告音
+		sound.PlayOneShot (sound.clip);
+		yield return new WaitForSeconds (2.0f);
 
 		//プレイヤーの背後に壁が出現
 		wall.GetComponent<Rigidbody2D>().gravityScale = 3;
