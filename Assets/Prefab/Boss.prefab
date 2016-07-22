@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 472700}
   - 50: {fileID: 5075040}
   - 114: {fileID: 11432972}
+  - 82: {fileID: 8215118}
   m_Layer: 17
   m_Name: Boss
   m_TagString: Untagged
@@ -26,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443932}
   - 60: {fileID: 6054228}
-  m_Layer: 17
+  m_Layer: 18
   m_Name: shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,8 +63,25 @@ GameObject:
   m_Component:
   - 4: {fileID: 439692}
   - 60: {fileID: 6053562}
-  m_Layer: 17
+  m_Layer: 18
   m_Name: hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &193262
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 422462}
+  - 61: {fileID: 6149652}
+  - 114: {fileID: 11440758}
+  m_Layer: 19
+  m_Name: Guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,6 +101,18 @@ Transform:
   - {fileID: 443932}
   m_Father: {fileID: 472700}
   m_RootOrder: 0
+--- !u!4 &422462
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 439692}
+  m_RootOrder: 0
 --- !u!4 &439692
 Transform:
   m_ObjectHideFlags: 1
@@ -92,7 +122,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.58, y: 1.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 422462}
   m_Father: {fileID: 407300}
   m_RootOrder: 0
 --- !u!4 &443932
@@ -114,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.13, y: 0, z: 0}
+  m_LocalPosition: {x: 163.24, y: 11.28, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 407300}
@@ -146,15 +177,15 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
     - - {x: 0.45800543, y: 1.165391}
-      - {x: 1.052836, y: 0.66524386}
-      - {x: 0.21883631, y: -0.3637333}
-      - {x: -0.43511677, y: -0.61818105}
+      - {x: 0.7718587, y: 0.7629757}
+      - {x: -0.2209549, y: -0.26600194}
+      - {x: -0.5328479, y: -0.63039744}
       - {x: -0.3531041, y: 0.016402125}
 --- !u!60 &6054228
 PolygonCollider2D:
@@ -165,7 +196,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -173,8 +204,22 @@ PolygonCollider2D:
     - - {x: 0.083963156, y: 0.59884155}
       - {x: 0.62926173, y: -0.19116676}
       - {x: 0.28698325, y: -0.5336385}
-      - {x: -0.33890295, y: -0.48680773}
-      - {x: -0.61286354, y: 0.3050362}
+      - {x: -0.21673965, y: -0.40129286}
+      - {x: -0.4784832, y: 0.29281986}
+--- !u!61 &6149652
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193262}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.1261282, y: 0.12613082}
+  serializedVersion: 2
+  m_Size: {x: 0.41140455, y: 1.7567787}
 --- !u!61 &6184692
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -189,6 +234,80 @@ BoxCollider2D:
   m_Offset: {x: -1.2228769, y: 1.2740479}
   serializedVersion: 2
   m_Size: {x: 2.067065, y: 1.9072355}
+--- !u!82 &8215118
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118926}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5b85538785428b74b810eb972d9d09f2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 0.61
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0.64
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9576920
 Animator:
   serializedVersion: 3
@@ -218,14 +337,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossHp: 80
-  score: 0
+  score: 500
   distance: 0
+  smokeG: {fileID: 116924, guid: aa5b9b39256e95943b167d48a7eca2c2, type: 2}
   robo: {fileID: 0}
-  shovelMaxDis: 13
-  shovelMinDis: 12
+  shovelMaxDis: 15
+  shovelMinDis: 11
   dis: 0
-  handMaxDis: 9
-  handMinDis: 8
+  handMaxDis: 10
+  handMinDis: 7
+  sound: {fileID: 0}
+--- !u!114 &11440758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5051b9cbb0d83c247aed52fb7f6255d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11443482
 MonoBehaviour:
   m_ObjectHideFlags: 1

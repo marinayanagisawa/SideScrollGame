@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Guard : MonoBehaviour {
 
-	// Use this for initialization
+	AudioSource sound;
+
 	void Start () {
-	
+		sound = GetComponent<AudioSource> ();
+
 	}
 	
 	// Update is called once per frame
@@ -18,6 +20,8 @@ public class Guard : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 
 		if (layerName == "shot") {
+			
+			sound.PlayOneShot (sound.clip);
 			Destroy (col.gameObject);
 
 		}
