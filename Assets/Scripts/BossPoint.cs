@@ -15,7 +15,8 @@ public class BossPoint : MonoBehaviour {
 
 	private Animator anim;
 
-	AudioSource sound;
+	public AudioSource[] sound;
+
 
 	void Start () {
 
@@ -35,7 +36,13 @@ public class BossPoint : MonoBehaviour {
 
 		anim = GameObject.Find ("warnning").GetComponent<Animator> ();
 
-		sound = GetComponent<AudioSource> ();
+		AudioSource[] audiosources= GetComponents<AudioSource> ();
+		sound[0] = audiosources [0];
+		sound[1] = audiosources [1];
+		//sound[0] = GetComponent<AudioSource> ();
+		//sound[1] = GetComponent<AudioSource> ();
+
+
 	}
 		
 
@@ -57,11 +64,12 @@ public class BossPoint : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 
 		//警告音
-		sound.PlayOneShot (sound.clip);
+		sound[0].PlayOneShot (sound[0].clip);
 		yield return new WaitForSeconds (2.0f);
 
 		//プレイヤーの背後に壁が出現
 		wall.GetComponent<Rigidbody2D>().gravityScale = 3;
+		sound [1].PlayOneShot (sound [1].clip);
 		yield return new WaitForSeconds (1.5f);
 
 		//カメラチェンジ（メインからサブ）
@@ -70,6 +78,7 @@ public class BossPoint : MonoBehaviour {
 
 		//Bossの登場演出
 		boss.GetComponent<Rigidbody2D> ().gravityScale = 3;
+		sound [1].PlayOneShot (sound [1].clip);
 		yield return new WaitForSeconds (0.8f);
 
 		//Bossの着地後に画面揺れ
