@@ -47,9 +47,24 @@ GameObject:
   - 61: {fileID: 6184692}
   - 114: {fileID: 11487238}
   - 114: {fileID: 11443482}
-  - 61: {fileID: 6122386}
   m_Layer: 17
   m_Name: BossSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &153056
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 421250}
+  - 61: {fileID: 6145552}
+  m_Layer: 17
+  m_Name: foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,8 +116,21 @@ Transform:
   m_Children:
   - {fileID: 439692}
   - {fileID: 443932}
+  - {fileID: 421250}
   m_Father: {fileID: 472700}
   m_RootOrder: 0
+--- !u!4 &421250
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 407300}
+  m_RootOrder: 2
 --- !u!4 &422462
 Transform:
   m_ObjectHideFlags: 1
@@ -208,20 +236,20 @@ PolygonCollider2D:
       - {x: 0.28698325, y: -0.5336385}
       - {x: -0.21673965, y: -0.40129286}
       - {x: -0.4784832, y: 0.29281986}
---- !u!61 &6122386
+--- !u!61 &6145552
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150096}
+  m_GameObject: {fileID: 153056}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.9256124, y: 0.38078055}
+  m_Offset: {x: -1.1529684, y: 0.40911865}
   serializedVersion: 2
-  m_Size: {x: 2.363261, y: 0.21014532}
+  m_Size: {x: 2.004214, y: 0.18176469}
 --- !u!61 &6149652
 BoxCollider2D:
   m_ObjectHideFlags: 1
