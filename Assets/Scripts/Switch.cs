@@ -20,7 +20,7 @@ public class Switch : MonoBehaviour {
 
 		//プレイヤーと当たったら,設定しておいたギミックが作動
 		if (layerName == "Chara") {
-			gimmickObj.GetComponent<Rigidbody2D> ().gravityScale = 1;
+			gimmickObj.GetComponent<Rigidbody2D> ().gravityScale = 2;
 			sound.PlayOneShot (sound.clip, 1.0f);
 
 			Destroy (gimmickObj, 2.0f);
