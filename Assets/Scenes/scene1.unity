@@ -3165,6 +3165,18 @@ Prefab:
       propertyPath: m_Name
       value: MoveStepB (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6119020, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0040359497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119020, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
+      propertyPath: m_Offset.y
+      value: 9.618654
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119020, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
+      propertyPath: m_Size.y
+      value: 0.9056015
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
   m_IsPrefabParent: 0
@@ -4156,6 +4168,18 @@ Prefab:
     - target: {fileID: 466856, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119020, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0040359497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119020, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
+      propertyPath: m_Offset.y
+      value: 9.681491
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119020, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
+      propertyPath: m_Size.y
+      value: 0.7799282
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4eb50b5fbc6d79845b3642cc7d78dc46, type: 2}
@@ -7726,7 +7750,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1839640296}
   - 61: {fileID: 1839640297}
-  m_Layer: 8
+  m_Layer: 20
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
