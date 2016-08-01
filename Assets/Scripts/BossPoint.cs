@@ -32,6 +32,9 @@ public class BossPoint : MonoBehaviour {
 		subCamera = GameObject.Find ("SubCamera");
 		subCamera.SetActive(false);
 
+		//壁は見えない状態にしておく
+		wall.GetComponent<SpriteRenderer> () .enabled = false;
+
 		shaker = GameObject.Find ("Shaker");
 
 		anim = GameObject.Find ("warnning").GetComponent<Animator> ();
@@ -68,6 +71,9 @@ public class BossPoint : MonoBehaviour {
 		//警告音
 		sound[0].PlayOneShot (sound[0].clip);
 		yield return new WaitForSeconds (2.0f);
+
+		//壁を可視化
+		wall.GetComponent<SpriteRenderer> () .enabled = true;
 
 		//プレイヤーの背後に壁が出現
 		wall.GetComponent<Rigidbody2D>().gravityScale = 3;
