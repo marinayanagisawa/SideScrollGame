@@ -13,7 +13,9 @@ public class BossPoint : MonoBehaviour {
 	private GameObject wall;
 	private PlayerController pc;
 
-	private Animator anim;
+	//アニメーター（Warning警告,BossHPゲージ）
+	private Animator Wanim;
+	public Animator UIanim;
 
 	public AudioSource[] sound;
 
@@ -37,7 +39,9 @@ public class BossPoint : MonoBehaviour {
 
 		shaker = GameObject.Find ("Shaker");
 
-		anim = GameObject.Find ("warnning").GetComponent<Animator> ();
+		Wanim = GameObject.Find ("warnning").GetComponent<Animator> ();
+		//UIanim = GameObject.Find ("BossHP").GetComponent<Animator> ();
+
 
 		//インスペクターから配列の大きさ（オーディオ分）を指定
 		AudioSource[] audiosources= GetComponents<AudioSource> ();
@@ -65,7 +69,7 @@ public class BossPoint : MonoBehaviour {
 		yield return new WaitForSeconds (0.2f);
 
 		//Boss出現警告をUIで表示
-		anim.SetTrigger("warnning");
+		Wanim.SetTrigger("warnning");
 		yield return new WaitForSeconds (0.5f);
 
 		//警告音
@@ -103,6 +107,9 @@ public class BossPoint : MonoBehaviour {
 		//Bossの着地後に画面揺れ
 		shaker.GetComponent<Shaker> ().shakeOnL = true;
 		yield return new WaitForSeconds (0.3f);
+
+		//ボスのHPゲージのスライドイン
+		UIanim.SetTrigger ("BossComeUp");
 
 		//コーンの落下演出
 		corn.GetComponent<BoxCollider2D> ().enabled = false;
