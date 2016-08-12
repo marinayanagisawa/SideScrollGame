@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour {
 
@@ -15,6 +16,8 @@ public class Boss : MonoBehaviour {
 	private GameObject wall;
 
 	private bool defeat = false;
+
+	private Slider bossSlider;
 
 	//プレイヤーとの距離を測る時に使用
 	public GameObject robo;
@@ -33,6 +36,10 @@ public class Boss : MonoBehaviour {
 		pc = GameObject.Find("robo").GetComponent<PlayerController>();
 		wall = GameObject.Find ("BossWall");
 		sound = GetComponent<AudioSource> ();
+
+		//ボスのHPゲージ取得
+		bossSlider = GameObject.Find ("BossSlider").GetComponent<Slider> ();
+		bossSlider.value = bossHp;
 	}
 	
 
@@ -68,6 +75,8 @@ public class Boss : MonoBehaviour {
 			if (layerName == "shot") {
 				//ダメージ計算
 				bossHp = bossHp - pc.shotPower; 
+				//HPゲージに反映
+				bossSlider.value = bossHp;
 
 				//倒した場合の処理
 				if (bossHp <= 0) {
