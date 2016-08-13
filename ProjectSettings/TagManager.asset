@@ -53,7 +53,7 @@ TagManager:
   - name: Front
     uniqueID: 2892791469
     locked: 0
-  - name: Enemy
+  - name: EnemyFront
     uniqueID: 165808177
     locked: 0
   - name: Smoke

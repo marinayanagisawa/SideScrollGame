@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy:
   - {fileID: 170562, guid: 8c7ff9c391ee02d4781e50c9afc33631, type: 2}
-  - {fileID: 181160, guid: 315a43aaa075f2c44ae310b20489d165, type: 2}
+  - {fileID: 139580, guid: 5825792e1cd1dbe40bba63783bc08560, type: 2}
   enemyNum: 1
   once: 0
   robo: {fileID: 1998747394}
@@ -2689,7 +2689,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424706, guid: 255176a7d15d10c499def4c80f67c8c8, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 255176a7d15d10c499def4c80f67c8c8, type: 2}
@@ -4762,7 +4762,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472700, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7a0ebb66bff11342996f742660f102b, type: 2}
