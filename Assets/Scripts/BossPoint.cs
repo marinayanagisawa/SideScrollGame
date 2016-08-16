@@ -121,7 +121,7 @@ public class BossPoint : MonoBehaviour {
 
 		//プレイヤーの入力受付を再開
 		pc.canMove = true;
-		yield return new WaitForSeconds (1.0f);
+		//yield return new WaitForSeconds (1.0f);
 
 		//ToDo--------------bossBGMの再生（GameControllerに追加）
 
