@@ -106,8 +106,8 @@ public class PlayerController : MonoBehaviour {
 		//プレイヤーのポジションを取得
 		Vector2 pos = transform.position;
 		//足元の判定の大きさを指定
-		Vector2 p1 = new Vector2 (pos.x - 0.5f , pos.y - 0.8f);
-		Vector2 p2 = new Vector2 (p1.x + 1.0f, p1.y - 0.2f);
+		Vector2 p1 = new Vector2 (pos.x - 0.45f , pos.y - 0.8f);
+		Vector2 p2 = new Vector2 (p1.x + 0.95f, p1.y - 0.2f);
 		//接地判定し,isGroundedフラグにチェック
 		isGrounded = Physics2D.OverlapArea (p1, p2, groundlayer);
 		//空中にいたらジャンプ不可
