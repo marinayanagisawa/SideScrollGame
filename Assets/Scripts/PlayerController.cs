@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour {
 		//isGrounded = Physics2D.Linecast (transform.position, transform.position - transform.up * 1, groundlayer);
 		//足場の端に立った時にジャンプ状態と認識され,動けなくなるバグが発生する模様
 
-		if (isGrounded && canMove) {
+		if (isGrounded && canMove && (!gc.isPause)) {
 
 			//移動処理	
 			if (Input.GetAxisRaw ("Horizontal") > 0.0f) {
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 
 			//撃てる状態であれば,弾を撃つ
-			if (canShot && canMove) {
+			if (canShot && canMove && (!gc.isPause)) {
 				StartCoroutine (PlayerShot ());
 			}
 		}

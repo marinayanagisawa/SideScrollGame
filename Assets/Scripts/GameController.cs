@@ -47,6 +47,10 @@ public class GameController : MonoBehaviour {
 	public Text resultLine;
 	public Text resultTotal;
 
+	//ポーズフラグ
+	public bool isPause = false;
+
+
 	void Start () {
 
 		gameOver = false;
@@ -106,6 +110,21 @@ public class GameController : MonoBehaviour {
 		//クリアフラグはGoal.csから受け取り,GameClear()を呼び出す
 		if (clear == true) {
 			GameClear ();
+		}
+
+
+		//ポーズ処理
+		if (isPause == false) {
+			if (Input.GetKeyDown (KeyCode.S)) {
+				isPause = true;
+				Pause ();
+			}
+		} else {
+
+			if (Input.GetKeyDown (KeyCode.S)) {
+				isPause = false;
+				Resume ();
+			}
 		}
 
 
@@ -208,6 +227,15 @@ public class GameController : MonoBehaviour {
 	//敵の爆発音(PlayerShotクラスから使う)
 	public void EnemyExplode(){
 		sound[1].PlayOneShot (sound[1].clip);
+	}
+
+	//ポーズ,レジューム
+	void Pause(){
+		Time.timeScale = 0;
+	}
+
+	void Resume(){
+		Time.timeScale = 1;
 	}
 
 }
