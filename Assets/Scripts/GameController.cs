@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour {
 	//ゲームオーバー表示用
 	public Text gameOverText;
 
+	//ポーズ表示
+	public Text pauseText;
+
 	//スコア合計用（スコア計算本体は,Enemyの子クラスで,衝突判定時行う）
 	public int playScore;
 	public int highScore;
@@ -59,6 +62,7 @@ public class GameController : MonoBehaviour {
 		pc = robo.GetComponent<PlayerController> ();
 
 		gameOverText = GameObject.Find ("GameOverText").GetComponent<Text> ();
+		pauseText = GameObject.Find ("PauseText").GetComponent<Text> ();
 
 		scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
 		highScoreText = GameObject.Find ("HighScoreText").GetComponent<Text> ();
@@ -117,12 +121,14 @@ public class GameController : MonoBehaviour {
 		if (isPause == false) {
 			if (Input.GetKeyDown (KeyCode.S)) {
 				isPause = true;
+				pauseText.text = "PAUSE";
 				Pause ();
 			}
 		} else {
 
 			if (Input.GetKeyDown (KeyCode.S)) {
 				isPause = false;
+				pauseText.text = "";
 				Resume ();
 			}
 		}
