@@ -87,6 +87,9 @@ public class Boss : MonoBehaviour {
 
 					//撃破処理
 					StartCoroutine("Defeat");
+
+					gc.StopBGM();
+
 				}
 			}
 		}

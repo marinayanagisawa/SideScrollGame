@@ -85,6 +85,8 @@ public class GameController : MonoBehaviour {
 		sound[1] = audiosources [1];
 		sound[2] = audiosources [2];
 		sound[3] = audiosources [3];
+		sound[4] = audiosources [4];
+		sound[5] = audiosources [5];
 
 	}
 	
@@ -142,7 +144,8 @@ public class GameController : MonoBehaviour {
 		//ゲームオーバーのテキスト表示
 		gameOverText.text = "GAME OVER";
 
-		sound [3].Stop ();
+		//ステージのBGMを止める
+		StopBGM();
 
 		//落下演出のため,カメラ（子要素）を切り離して終了
 		robo.transform.DetachChildren ();
@@ -164,8 +167,8 @@ public class GameController : MonoBehaviour {
 	public void GameClear(){
 		Debug.Log("GameClear(), Called!(from GameContriller)");
 
-		//-----------------------------------ToDo
-		//サウンドを鳴らす
+		//クリアサウンドを鳴らす
+		sound[5].PlayOneShot (sound[5].clip);
 
 		//クリア表示
 		clearAnim.SetTrigger("Clear");
@@ -242,6 +245,15 @@ public class GameController : MonoBehaviour {
 
 	void Resume(){
 		Time.timeScale = 1;
+	}
+
+	public void StopBGM(){
+		sound [3].Stop ();
+		sound [4].Stop ();
+	}
+
+	public void BossBGM(){
+		sound[4].Play(44100);
 	}
 
 }

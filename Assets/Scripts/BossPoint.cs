@@ -12,6 +12,7 @@ public class BossPoint : MonoBehaviour {
 	private GameObject boss;
 	private GameObject wall;
 	private PlayerController pc;
+	private GameController gc;
 
 	//アニメーター（Warning警告,BossHPゲージ）
 	private Animator Wanim;
@@ -28,7 +29,8 @@ public class BossPoint : MonoBehaviour {
 		wall = GameObject.Find("BossWall");
 
 		pc = robo.GetComponent<PlayerController> ();
-		
+		gc = GameObject.Find ("GameController").GetComponent<GameController> ();
+			
 		//カメラを取得し,サブカメラは不使用にしておく
 		mainCamera = GameObject.Find ("Main Camera");
 		subCamera = GameObject.Find ("SubCamera");
@@ -62,7 +64,6 @@ public class BossPoint : MonoBehaviour {
 
 
 	IEnumerator BossComeUp(){
-		//ToDo----------------BGMをストップ（GameController）
 
 		//プレイヤーの入力受付を中止
 		pc.canMove = false;
@@ -75,6 +76,8 @@ public class BossPoint : MonoBehaviour {
 		//警告音
 		sound[0].PlayOneShot (sound[0].clip);
 		yield return new WaitForSeconds (2.0f);
+
+		gc.StopBGM();
 
 		//壁を可視化
 		wall.GetComponent<SpriteRenderer> () .enabled = true;
@@ -123,7 +126,7 @@ public class BossPoint : MonoBehaviour {
 		pc.canMove = true;
 		//yield return new WaitForSeconds (1.0f);
 
-		//ToDo--------------bossBGMの再生（GameControllerに追加）
+		gc.BossBGM();
 
 		//出現ポイント,演出用オブジェクトの削除
 		Destroy(corn);
