@@ -35,7 +35,7 @@ public class TitleManager : MonoBehaviour {
 	
 		if (start == false) {
 			//スタート処理
-			if (Input.GetButtonDown ("Fire1")) {
+			if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown(KeyCode.Space)) {
 
 				//ボタン連射に対応
 				start = true;

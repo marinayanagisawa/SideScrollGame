@@ -81,8 +81,8 @@ public class PlayerController : MonoBehaviour {
 			}
 
 
-			//ジャンプ処理(spaceキーのJumpがたまに効かないので,暫く左Altで様子見)
-			if (Input.GetButtonDown ("Fire2")) {
+			//ジャンプ処理
+			if (Input.GetButtonDown ("Fire2") || Input.GetKeyDown (KeyCode.Space)) {
 				//ジャンプの挙動がおかしいので,処理の中身はFixedUpdateに移動
 				//Debug.Log("Jump!!!");
 				moveJ = true;
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour {
 		}
 			
 		//プレイヤーの弾を発射
-		if (Input.GetButtonDown ("Fire1")) {
+		if (Input.GetButtonDown ("Fire1") ||Input.GetKeyDown (KeyCode.Return)) {
 
 			//撃てる状態であれば,弾を撃つ
 			if (canShot && canMove && (!gc.isPause)) {
