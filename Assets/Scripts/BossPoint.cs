@@ -77,7 +77,7 @@ public class BossPoint : MonoBehaviour {
 		sound[0].PlayOneShot (sound[0].clip);
 		yield return new WaitForSeconds (2.0f);
 
-		gc.StopBGM();
+		//gc.StopBGM();
 
 		//壁を可視化
 		wall.GetComponent<SpriteRenderer> () .enabled = true;
@@ -126,7 +126,7 @@ public class BossPoint : MonoBehaviour {
 		pc.canMove = true;
 		//yield return new WaitForSeconds (1.0f);
 
-		gc.BossBGM();
+		//gc.BossBGM();
 
 		//出現ポイント,演出用オブジェクトの削除
 		Destroy(corn);

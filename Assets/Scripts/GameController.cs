@@ -168,7 +168,7 @@ public class GameController : MonoBehaviour {
 		Debug.Log("GameClear(), Called!(from GameContriller)");
 
 		//クリアサウンドを鳴らす
-		sound[5].PlayOneShot (sound[5].clip);
+		//sound[5].PlayOneShot (sound[5].clip);
 
 		//クリア表示
 		clearAnim.SetTrigger("Clear");
